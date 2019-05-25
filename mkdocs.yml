@@ -1,0 +1,5 @@
+site_name: ElreragDocs
+
+nav:
+- Home: 'index.md'
+- UML: 'uml/index.md'
