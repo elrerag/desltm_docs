@@ -11,7 +11,9 @@ jobs:
       - run: pip install --upgrade pip
       - run: pip install virtualenv
       - run: virtualenv env --python=python3
-      - run: source ./env/bin/activate
+      - run: cd env
+      - run: source ./bin/activate
+      - run: ls -l
       - run: pip install mkdocs
       - run: mkdocs build
       - run: ls -l
