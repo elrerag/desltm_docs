@@ -2,6 +2,17 @@ version: 2
 
 jobs:
 
+  build-job:
+    docker:
+      - image: circleci/python:3.6
+    working_directory: /tmp/desltnDocs
+    steps:
+      - checkout
+      - run: pip install --upgrade pip
+      - run: pip install mkdocs
+      - run: mkdocs build
+      - run: ls -l
+
   deploy-job:
     docker:
       - image: circleci/node:10
@@ -21,6 +32,7 @@ workflows:
 
   -deploy:
     jobs:
+      - build-job
       - deploy-job:
           filters:
             branches:
