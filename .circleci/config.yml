@@ -12,9 +12,7 @@ jobs:
       - run: pip install virtualenv
       - run: virtualenv env --python=python3
       - run: ls -l
-      - run: cd env
-      - run: ls -l
-      - run: source ./bin/activate
+      - run: cd env && source ./bin/activate
       - run: ls -l
       - run: pip install mkdocs
       - run: mkdocs build
