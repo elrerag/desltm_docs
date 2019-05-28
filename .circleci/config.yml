@@ -4,7 +4,7 @@ jobs:
   deploy-job:
     docker:
       - image: circleci/node:7.10
-    working_directory: /tmp/desltnDocs
+    working_directory: $CIRCLE_WORKING_DIRECTORY
     steps:
       - run: 
           name: Install Firebase Tools
