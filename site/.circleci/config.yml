@@ -12,5 +12,5 @@ commands:
           name: Install Firebase Tools
           command: npm install --prefix=./firebase-deploy firebase-tools
       - run:
-          name: Deploy to Firebase
+          name: Deploy to Firebase 
           command: ./firebase-deploy/node_modules/.bin/firebase deploy --token=1/AIQ24dHJsbBqcN6D40pZc9le-J5gvQIO1_9Nhj0RyJKXZeCdL1_v-ysexPqgqsZa
