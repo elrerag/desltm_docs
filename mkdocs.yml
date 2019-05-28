@@ -2,4 +2,6 @@ site_name: ElreragDocs
 
 nav:
 - Home: 'index.md'
-- UML: 'uml/index.md'
+- UML: 
+    - Lectura: 'uml/lectura/index.md'
+
