@@ -1,0 +1,23 @@
+version: 2
+
+deploy-job:
+  docker:
+    - image: circleci/node:9.9
+  working_directory: /Users/luisherrera/projects/PYTHON/virtual36/env/MKDOCS/desltnDocs
+  steps:
+    - run:
+        name: Deploy Master to Firebase
+        command: ./node_modules/.bin/firebase deploy --token=1/-W52z-gII_i-eYLW6cgIpVLwheiFC3WuArz5mtuE8k5Ue1K_orzrqcWy0qxh8vVM
+
+workflows:
+  version: 2
+
+  -deploy:
+    jobs:
+      - build-job
+      - deploy-job:
+          requires:
+            - build-job
+          filters:
+            branches:
+              only: master
