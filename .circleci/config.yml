@@ -2,21 +2,12 @@ version: 2
 
 jobs:
 
-  build-job:
-    docker:
-      - image: circleci/node:10
-    working_directory: /tmp/desltnDocs
-    steps:
-      - checkout
-      - run: echo "Hola mundo"
-      - run: ls -l
-
-
   deploy-job:
     docker:
       - image: circleci/node:10
     working_directory: /tmp/desltnDocs
     steps:
+      - checkout
       - run: 
           name: Install Firebase Tools
           command: npm install firebase-tools
@@ -30,10 +21,7 @@ workflows:
 
   -deploy:
     jobs:
-      - build-job
       - deploy-job:
-          requires:
-            - build-job
           filters:
             branches:
               only: master
