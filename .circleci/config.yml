@@ -12,7 +12,7 @@ jobs:
       - run: ls -l
       - run:
           name: Deploy Master to Firebase
-          command: ./tmp/desltnDocs/node_modules/.bin/firebase deploy --token=1/-W52z-gII_i-eYLW6cgIpVLwheiFC3WuArz5mtuE8k5Ue1K_orzrqcWy0qxh8vVM
+          command: ./node_modules/.bin/firebase deploy --token=1/-W52z-gII_i-eYLW6cgIpVLwheiFC3WuArz5mtuE8k5Ue1K_orzrqcWy0qxh8vVM
 
 workflows:
   version: 2
