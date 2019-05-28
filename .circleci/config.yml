@@ -4,14 +4,14 @@ jobs:
   deploy-job:
     docker:
       - image: circleci/node:7.10
-    working_directory: $CIRCLE_WORKING_DIRECTORY
+    working_directory: /tmp/desltnDocs
     steps:
       - run: 
           name: Install Firebase Tools
-          command: npm install --prefix=./firebase-deploy firebase-tools
+          command: npm install firebase-tools
       - run:
           name: Deploy Master to Firebase
-          command: ./firebase-deploy/node_modules/.bin/firebase deploy --token=1/-W52z-gII_i-eYLW6cgIpVLwheiFC3WuArz5mtuE8k5Ue1K_orzrqcWy0qxh8vVM
+          command: firebase deploy --token=1/-W52z-gII_i-eYLW6cgIpVLwheiFC3WuArz5mtuE8k5Ue1K_orzrqcWy0qxh8vVM
 
 workflows:
   version: 2
