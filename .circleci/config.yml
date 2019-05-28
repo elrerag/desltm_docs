@@ -24,6 +24,7 @@ jobs:
       - image: circleci/node:10
     working_directory: /tmp/desltnDocs
     steps:
+      - checkout
       - run: 
           name: Install Firebase Tools
           command: npm install firebase-tools
