@@ -8,12 +8,16 @@ jobs:
     working_directory: /tmp/desltnDocs
     steps:
       - checkout
+      - run: rm -R -f sites
       - run: 
-          name: instalaciOn de las dependencias de python
+          name: instalación del virtualenv
           command: pip install --upgrade pip && pip install virtualenv && virtualenv env --python=python3.6
       - run:
           name: instalaciOn de mkdocs y  en un entorno virtual.
-          command: cd env && source ./bin/activate && pip install mkdocs && cd .. &&  mkdocs build
+          command: source ./env/bin/activate && 
+            pip install mkdocs && 
+            cd .. &&  
+            mkdocs build
 
   deploy-job:
     docker:
