@@ -1,6 +1,18 @@
 version: 2
 
 jobs:
+
+  build-job:
+    docker:
+      - image: circleci/node:10
+    working_directory: /desltnDocs
+    parallelism: 2
+    steps:
+      - checkout
+      - run: echo "Hola mundo"
+      - run: ls -l
+
+
   deploy-job:
     docker:
       - image: circleci/node:10
