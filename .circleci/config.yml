@@ -18,6 +18,10 @@ jobs:
             pip install mkdocs && 
             mkdocs build &&
             ls -l
+      - save_cache:
+          key: 12345678
+          paths:
+            - /tmp/desltnDocs/site
 
   deploy-job:
     docker:
@@ -25,6 +29,8 @@ jobs:
     working_directory: /tmp/desltnDocs
     steps:
       - checkout
+      - restore_cache:
+          key: 12345678
       - run: 
           name: Install Firebase Tools
           command: npm install firebase-tools
