@@ -16,7 +16,6 @@ jobs:
           name: instalaciOn de mkdocs y  en un entorno virtual.
           command: source ./env/bin/activate && 
             pip install mkdocs && 
-            cd .. &&  
             mkdocs build &&
             ls -l
 
