@@ -5,7 +5,7 @@ jobs:
   build-job:
     docker:
       - image: circleci/node:10
-    working_directory: /desltnDocs
+    working_directory: /tmp/desltnDocs
     steps:
       - checkout
       - run: echo "Hola mundo"
