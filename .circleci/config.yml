@@ -8,7 +8,7 @@ jobs:
     working_directory: /tmp/desltnDocs
     steps:
       - checkout
-      - run: rm -rf sites
+      - run: rm -rf site
       - run: 
           name: instalación del virtualenv
           command: pip install --upgrade pip && pip install virtualenv && virtualenv env --python=python3.6
@@ -18,10 +18,10 @@ jobs:
             pip install mkdocs && 
             mkdocs build &&
             ls -l
-      - save_cache:
-          key: 12345678
+      - persist_to_workspace:
+          root: /tmp/desltnDocs
           paths:
-            - /tmp/desltnDocs/site
+            - site
 
   deploy-job:
     docker:
@@ -29,8 +29,10 @@ jobs:
     working_directory: /tmp/desltnDocs
     steps:
       - checkout
-      - restore_cache:
-          key: 12345678
+
+      - attach_workspace:
+          at: /tmp/desltnDocs
+
       - run: 
           name: Install Firebase Tools
           command: npm install firebase-tools
