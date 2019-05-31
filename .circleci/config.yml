@@ -8,6 +8,7 @@ jobs:
     working_directory: /tmp/desltnDocs
     steps:
       - checkout
+
       - run: rm -rf site
       - run: 
           name: instalación del virtualenv
@@ -29,9 +30,6 @@ jobs:
     working_directory: /tmp/desltnDocs
     steps:
       - checkout
-
-      - attach_workspace:
-          at: /tmp/desltnDocs
 
       - run: 
           name: Install Firebase Tools
