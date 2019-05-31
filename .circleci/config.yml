@@ -31,9 +31,13 @@ jobs:
     steps:
       - checkout
 
+      - attach_workspace:
+          at: /tmp/desltnDocs
+
       - run: 
           name: Install Firebase Tools
           command: npm install firebase-tools
+
       - run: ls -l
       - run:
           name: Deploy Master to Firebase
