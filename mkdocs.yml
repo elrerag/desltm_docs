@@ -1,7 +1,7 @@
 site_name: ElreragDocs
 
 nav:
-- Home: 'index.md'
+- Home: 'uml/lectura.md'
 - UML: 
     - Lectura: 'uml/lectura.md'
     - Motivación: 'uml/motivaciOn.md'

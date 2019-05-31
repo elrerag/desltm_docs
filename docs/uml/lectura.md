@@ -1,13 +1,20 @@
 # Lectura
 
 ___
+# Nombre de la unidad: 
+UML
 
-## Competencias esperadas:
-* Conocer el lenguaje de modelado unificado (UML).
+# Descripción unidad
+En el capítulo de UML se conocerá el lenguaje de modelamiento unificado (UML), con el cual se aprenderá a crear casos de usos, diagramas de secuencias y diagramas de clases, para agilizar la creación de piezas de software.
 
-## Capítulo 1: Introducción.
+# Requerimientos
+Se espera que el alumno posea un conocimiento previo del paradigma de programación orientado a objetos, además de tener instalada la herramienta StarUml.
 
-### Glosario del capítulo:
+# Referencias  
+
+* UML distilled - Martin Fowler.
+
+### Glosario
 * __Notación__: Es la acción y efecto de notar, hace referencia al sistema de signos convencionales que se adopta, para expresar algún concepto.
 
 * __Metodología__: Grupo de mecanismos o procedimientos racionales, empleados para el logro de un objetivo.
@@ -39,6 +46,14 @@ ___
 * __Patrón de diseño de modelo-vista-controlador (MVC)__: Especifica que una aplicación consta de tres capas: La primera es el modelo de datos, que es la capa con la responsabilidad de la gestión de los datos, luego tenemos la capa de presentación, es lo que el usuario ve, es decir, la vista. La forma en que la información sea presentada al usuario, son responsabilidad de esta capa, por último, tenemos la capa del controlador, que es la capa encargada de orquestar o controlar, la interacción de las dos capas anteriormente mencionadas.
 
 * __Agilidad__: Se refiere a la flexibilidad que posee un proyecto, es decir, que pueda cambiar y que esto no produzca un alto impacto en el esfuerzo.
+
+## Capítulo 1: Introducción.
+
+## Competencias esperadas.
+* Conocer el lenguaje de modelado unificado (UML).
+* Conocer los distintos tipos de diagramas.
+* Reconocer el paradigma de la programación en el que está basado UML.
+
 
 ### ¿Qué es UML?
 UML (Unified Modeling language), es un **lenguaje** de modelado unificado, que surge a finales de la década de los 80 y principios de los 90. Entre los años 94 y 96, Grady y Jim e Ivar, conocidos como; "los tres amigos", crearon finalmente UML. Resultado de un trabajo iterativo y gradual, que pone a nuestra disposición, una norma construida sobre muchas ideas y contribuciones realizadas (unificadas), por numerosos individuos y compañías de la comunidad de la orientación a objetos.  
@@ -83,6 +98,10 @@ Todas las técnicas de UML son útiles durante esta etapa; pero hay que ser cuid
 > Los memorandos cuidadosamente escritos y seleccionados, pueden sustituir con toda facilidad a la tradicional documentación detallada del diseño. Esta última es sobresaliente en pocas ocasiones, excepto en algunos puntos aislados. Destaque estos puntos... y olvídese del resto.. "Ward Cunningham (1996)"
 
 Durante la transición, no se hacen desarrollos para añadir funciones nuevas (a menos que sean pequeñas y absolutamente indispensables). Ciertamente, sí hay desarrollo para depuración. Un buen ejemplo de una fase de transición es el tiempo entre la liberación beta y ]a liberación definitiva del producto.
+
+## Notaciónes UML.
+
+UML como se ha indicado, es un lenguaje; pero debemos saber como dicho lenguaje, nos ayuda para representar los conceptos del paradigma de la orientación a objetos. A continuación veremos algunos diagramas que utilizan este lenguaje.
 
 
 
