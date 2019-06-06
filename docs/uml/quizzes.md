@@ -67,15 +67,55 @@
       <li>A - Requerimientos funcionales. </li>
       <li>B - Requerimientos NO funcionales.</li>
       <li>C - A y B, son correctas.</li>
-      <li>E - Ninguna de las anteriores.</li>
+      <li>D - Ninguna de las anteriores.</li>
    </ul>  
 *Respuesta correcta: A.*
 
-##### **Pregunta 2: ¿De qué tipo de requerimientos se extraen los casos de uso?**
+##### **Pregunta 2 - De las siguientes afirmaciones. ¿Cuál representa mejor, la definición del diagrama de casos de uso? 
    <ul style="list-style-type: none;">
-      <li>A - Requerimientos funcionales. </li>
-      <li>B - Requerimientos NO funcionales.</li>
-      <li>C - A y B, son correctas.</li>
-      <li>E - Ninguna de las anteriores.</li>
+      <li>A - Representa, el rendimiento de un sistema. </li>
+      <li>B - Representa, interacciones entre el usuario y el sistema.</li>
+      <li>C - Representa, escenarios entre el usuario y el sistema.</li>
+      <li>D - A y B, son correctas.</li>
+      <li>E - B y C, son correctas.</li>
    </ul>  
-*Respuesta correcta: A.*
+*Respuesta correcta: B.*
+
+##### **Pregunta 3 - Cuál de las siguientes afirmaciones, __es falsa__.
+   <ul style="list-style-type: none;">
+      <li>A - Un objetivo del usuario, puede estar compuesto por uno o más casos de uso.</li>
+      <li>B - El número de casos de uso, está directamente relacionado con el número de requerimientos funcionales.</li>
+      <li>C - El Estereotipo:`<<comunicate>>`, puede o no, ir escrito en la relación.</li>
+      <li>D - Debemos cuidar la granularidad, tomando en cuenta, sólo aquellos detalles que importan para la comprensión del problema a modelar.</li>
+      <li>E - Los actores, son representaciones de seres humanos, que interactúan con el sistema.</li>
+   </ul>  
+*Respuesta correcta: E.*
+
+##### **Pregunta 3 - Cuál de las siguientes afirmaciones, __es falsa__.
+   <ul style="list-style-type: none;">
+      <li>A - Un objetivo del usuario, puede estar compuesto por uno o más casos de uso.</li>
+      <li>B - El número de casos de uso, está directamente relacionado con el número de requerimientos funcionales.</li>
+      <li>C - El Estereotipo:`<<comunicate>>`, puede o no, ir escrito en la relación.</li>
+      <li>D - Debemos cuidar la granularidad, tomando en cuenta, sólo aquellos detalles que importan para la comprensión del problema a modelar.</li>
+      <li>E - Los actores, son representaciones de seres humanos, que interactúan con el sistema.</li>
+   </ul>  
+*Respuesta correcta: E.*
+
+##### **Pregunta 4 - Cuál de las siguientes afirmaciones, __es verdadera__, respecto el estereotipo `<<extend>>´.  
+
+   <ul style="list-style-type: none;">
+      <li>A - Cuando existe esta relación, el caso de uso base, no puede funcionar, si el caso de uso que extiende, no se ejecuta.</li>
+      <li>B - Este tipo de relación, se trata del mismo mecanismo usado en la herencia, de la orientación a objetos.</li>
+      <li>C - Ninguna afirmación es correcta.</li>
+   </ul>  
+*Respuesta correcta: C.*
+
+##### **Pregunta 5 - Cuál de las siguientes afirmaciones, __es verdadera__.  
+
+   <ul style="list-style-type: none;">
+      <li>A - En la generalización, el caso de uso base no se puede ejecutar, si el caso de uso hijo no se ejecuta.</li>
+      <li>B - En la relación con el estereotipo `<<include>>` el caso de uso base no se puede ejecutar, si el caso de uso hijo no se ejecuta.</li>
+      <li>C - La generalización, no se puede dar entre actores.</li>
+      <li>D - Ninguna afirmación es correcta.</li>
+   </ul>  
+*Respuesta correcta: B.*
