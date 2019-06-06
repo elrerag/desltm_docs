@@ -1,6 +1,6 @@
 ## Quizzes
 ---
-#### **Capítulo 1: Introducción a UML**
+#### **Capítulo 1 - Introducción a UML**
 ---
 
 ##### **Pregunta 1: ¿Qué es UML?**
@@ -57,3 +57,25 @@
       <li>D - Concepción, elaboración, construcción, transición.</li>
    </ul>  
 *Respuesta correcta: D.*
+
+---
+#### __Capítulo 2 - Los casos de uso.__
+---
+
+##### **Pregunta 1: ¿De qué tipo de requerimientos se extraen los casos de uso?**
+   <ul style="list-style-type: none;">
+      <li>A - Requerimientos funcionales. </li>
+      <li>B - Requerimientos NO funcionales.</li>
+      <li>C - A y B, son correctas.</li>
+      <li>E - Ninguna de las anteriores.</li>
+   </ul>  
+*Respuesta correcta: A.*
+
+##### **Pregunta 2: ¿De qué tipo de requerimientos se extraen los casos de uso?**
+   <ul style="list-style-type: none;">
+      <li>A - Requerimientos funcionales. </li>
+      <li>B - Requerimientos NO funcionales.</li>
+      <li>C - A y B, son correctas.</li>
+      <li>E - Ninguna de las anteriores.</li>
+   </ul>  
+*Respuesta correcta: A.*

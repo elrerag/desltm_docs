@@ -118,7 +118,7 @@
 </p>
 
 ---
-## **Capítulo 1: Introducción a UML.**
+## **Capítulo 1 - Introducción a UML.**
 ---
 
 ### **1.1 - Competencias esperadas.**
@@ -180,7 +180,7 @@ Una visión del desarrollo en su nivel más alto sería como la que muestra la f
 
 &nbsp;
 <center>![Proceso de desarrollo de software](img/procesoDesarrollo.png)</center>
-<center>Figura 1.1: Proceso de desarrollo de software.</center>
+<center>Figura 1.1 - proceso de desarrollo de software.</center>
 &nbsp;
 
 <p style="text-align: justify;">
@@ -241,37 +241,39 @@ Los diagramas que están destacados, se detallarán en los capítulos posteriore
 &nbsp;
 
 ---
-## **Capítulo 2: Los casos de uso.**
+## **Capítulo 2 - Los casos de uso.**
 ---
 
-### **2.1 Competencias esperadas.**
+### **2.1 - Competencias esperadas.**
+* Entender los tipos de requerimientos.
 * Comprender el concepto de casos de uso.
 * Construir caso de uso.
 * Identificar los casos de uso, para una problemática y representarla con la notación UML.
 
-### **2.2 Introducción.**
+### **2.2 - Introducción.**
 <p style="text-align: justify;">
 Durante mucho tiempo, cuando era utilizado el paradigma procedural de forma popular, incluso cuando la POO comenzaba a ser muy conocida y utilizada. Los escenarios eran representados de forma muy rústica. las personas se auxiliaban de escenarios típicos que les ayudaban a comprender los requerimientos. Muchas veces se construían; pero no se documentaban, Ivar Jacobson, uno de los tres creadores de UML, elevó la visibilidad del caso de uso (su nombre para un escenario) a tal punto, que lo convirtió en un elemento primario de la planificación y el desarrollo de proyectos de software.
 </p>
 
-### **2.3 Diagramas de casos de uso (Cuentan una historia).**
+### **2.3 - Diagramas de casos de uso (Cuentan una historia).**
 <p style="text-align: justify;">
 En el año 1994, Jacobson no solo logró introducir los casos de uso como un concepto para ayudar en los primeros pasos del desarrollo de aplicaciones, además, desarrollo una representación gráfica de este hecho y lo llamó El <strong>Diagrama de Casos de Uso</strong>, y este diagrama ahora forma parte de UML.
 </p>
 
 Una representación de un diagrama de casos de uso sería el siguiente:  
 
+&nbsp;
+<center>![diagrama de casos de uso básico.](img/cuBasic.png)</center>
+<center><small>Figura 2.1 - diagrama de casos de uso básico.</small></center>  
+&nbsp;
 
-<center>![Proceso de desarrollo de software](img/cuBasic.png)</center>
-<center><small>Figura 2.1: Diagrama de casos de uso básico.</small></center>  
-
-#### **2.3.1 Casos de uso (CU).**
+#### **2.3.1 - Casos de uso (CU).**
 <p style="text-align: justify;">
 Un caso de uso es, en esencia, una <strong>interacción típica entre un usuario y un sistema de software</strong>. considere la aplicación con la que se escriben estas líneas que usted lee. Dos casos de uso típicos serían "poner una parte del texto en negritas" y "Borrar el texto seleccionado". Por medio de estos ejemplos, se puede uno dar una idea de ciertas propiedades de los casos de uso.  
 </p>
 
 <center>![Notación de un caso de uso.](img/CU.png)</center>
-<center><small>Figura 2.2: Notación de un caso de uso.</small></center>
+<center><small>Figura 2.2 - notación de un caso de uso.</small></center>
 
 
 
@@ -283,69 +285,84 @@ Un caso de uso es, en esencia, una <strong>interacción típica entre un usuario
 Usualmente, el caso de uso se extrae de las interacciones, que los potenciales usuarios del sistema tengan con la aplicación que se desee construir. Cada una de estas, se debe abordar de forma discreta, darle un nombre y escribir una breve descripción. No hay que detallar tan profundamente esta interacción, todo esto dependiendo de la cantidad de ramificaciones, de las que esté compuesto el caso de uso, se podrá más adelante, obtener mayores detalles que pueden resultar en nuevos casos de uso.
 </p>
 
-**Objetivos del usuario vs interacciones con el sistema.**
+* __Objetivos del usuario vs interacciones con el sistema.__
 <p style="text-align: justify;">
 Cuando se están tomando los requerimientos, a veces es fácil confundirse entre los objetivos que el usuario tiene y las <strong>interacciones que hará con el sistema</strong>. Supongamos el desarrollo de un sistema de ventas. Surgirán interacciones como: "Ingresar un producto", "actualizar precio". etc. Esto difiere de los objetivos que pueda tener el usuario como, "mantener la información de los precios actualizada", "Garantizar que esté disponible la información de los productos". En ambos casos tenemos requerimientos del usuario, pero la granularidad es diferente, ya que las interacciones son más sencillas de implementar que los objetivos. Cuando estamos reuniendo los casos de uso del sistema, debemos mantener una granularidad más o menos similar, es decir, el nivel de detalle y complejidad de cada caso de uso, debe ser similar. Finalmente como lo definimos, mantendremos el foco de la captura de los casos de uso, centradas en las interacciones, sin perder de vista los objetivos, en el caso que sólo tengamos los objetivos del usuario, debemos granular esta información, en interacciones necesarias para que se cumplan los objetivos.
 Como recomendación, es bueno tener varios casos de uso por objetivo, al menos los objetivos principales, ya que en las iteraciones que vayamos haciendo, se recibe mucho mejor que el usuario vea como se van cumpliendo sus objetivos (aunque lo más probable es que estos objetivos vayan evolucionando a medida que el sistema avanza).
 </p>
 
-#### **2.3.2 Actores**
+* __Requerimientos no funcionales (cómo hacerlo)__
+<p style="text-align: justify;">
+  Son aquellos que nos define el como debe efectuar la tarea, en este tipo de descripción entran detalles como el rendimiento de los recursos: ---"Quiero que el sistema sea rápido", ---"quiero que la base de datos tenga 10 teras de capacidad", etc.  
+</p>
+
+* __Requerimientos funcionales (qué hacer)__
+<p style="text-align: justify;">
+  Son aquellos que nos definen el qué hacer, <strong>los casos de uso, saldrán de este tipo de requerimientos</strong>, acá debemos identificar las interacciones que hará el usuario con el sistema, como: ---"Quiero poder dar de alta a un usuario", "quiero actualizar los detalles de los perfiles de un usuario", etc. 
+</p>
+
+#### **2.3.2 - Actores**
 <p style="text-align: justify;">
 Empleamos el término actor para llamar así al usuario, cuando desempeña ese papel con respecto al sistema. Los actores llevan a cabo casos de uso. Un mismo actor puede realizar muchos casos de uso; a la inversa, un caso de uso puede ser realizado por varios actores. <strong>No es necesario que los actores sean seres humanos</strong>, a pesar de que los actores estén representados por figuras humanas. El actor puede ser también un sistema externo que necesite cierta información del sistema actual. Todos los casos de uso tratan sobre funcionalidad requerida externamente. Si el sistema de contabilidad necesita un archivo, entonces ése es un requerimiento que debe satisfacerse, en donde el actor sería el sistema de contabilidad.
 </p>
 
 <center>![Proceso de desarrollo de software](img/actor.png)</center>
-<center><small>Figura 2.3: Notación de un actor.</small></center>
+<center><small>Figura 2.3 - notación de un actor.</small></center>
 
-#### **2.3.3 Relaciones**
+#### **2.3.3 - Relaciones**
  UML, define relaciones de estereotipos y generalización. Con estas relaciones, podemos ver gráficamente el como interactúan los casos de uso y los actores, para una mejor comprensión del escenario. A continuación definiremos cada una de ellas.
 
-**Estereotipo:** `<<comunicate>>`  
+* __Estereotipo:__ `<<comunicate>>`  
 <p style="text-align: justify;">
-Esta relación es la que más veremos en los CU, como estereotipo se representa por <code>&#60;&#60;communicate&#62;&#62;</code>; pero generalmente este estereotipo no va escrito. Es una relación de asociación que nos muestra la interacción entre un actor y el caso de uso.
+  Esta relación es la que más veremos en los CU, como estereotipo se representa por <code>&#60;&#60;communicate&#62;&#62;</code>; pero generalmente este estereotipo no va escrito. Es una relación de asociación que nos muestra la interacción entre un actor y el caso de uso.
 </p>
 
-<center>![Proceso de desarrollo de software](img/CUASS001.png)</center>
-<center><small>Figura 2.4: Relación de comunicación de asociación.</small></center>
+<center>![relación de comunicación de asociación](img/CUASS001.png)</center>
+<center><small>Figura 2.4 - relación de comunicación de asociación.</small></center>
 
-**Estereotipo:** `<<include>>`
-
+* __Estereotipo:__ `<<include>>`
 <p style="text-align: justify;">
- En términos muy simples, cuando relacionamos dos casos de uso con un “include”, estamos diciendo que el primero (el caso de uso base) incluye al segundo (el caso de uso incluido). Es decir, el segundo es parte esencial del primero. Sin el segundo, el primero no podría funcionar bien; pues no podría cumplir su objetivo.
+  En términos muy simples, cuando relacionamos dos casos de uso con un “include”, estamos diciendo que el primero (el caso de uso base) incluye al segundo (el caso de uso incluido). Es decir, el segundo es parte esencial del primero. Sin el segundo, el primero no podría funcionar bien; pues no podría cumplir su objetivo.
 </p>
 
-<center>![casos de uso include](img/CUinclude.png)</center>
-<center><small>Figura 2.5: Relación de inclusión.</small></center>
+&nbsp;
+<center>![relación de inclusión](img/CUinclude.png)</center>
+<center><small>Figura 2.5 - relación de inclusión.</small></center>
+&nbsp;
 
-**Estereotipo:** `<<extend>>`
-
+* __Estereotipo:__ `<<extend>>`
 <p style="text-align: justify;">
-Un caso de uso puede tener una extensión que no sea indispensable, pero sería bueno para la comprensión de lo que se desea desarrollar, que esta extensión sea expresada en el diagrama, es en este caso (no abusar), en donde haremos esta relación. Es decir, <strong>el caso de uso base, puede funcionar perfectamente, si no se realiza el caso de uso del cual extiende.</strong>  
-Notamos en la figura 2.6, que la dirección de la flecha es en otro sentido, esto se debe a que así es la notación de la relación de extensión, el sentido va desde el caso de uso que se extiende, hasta el caso de uso que la consume.  
+  Un caso de uso puede tener una extensión que no sea indispensable, pero sería bueno para la comprensión de lo que se desea desarrollar, que esta extensión sea expresada en el diagrama, es en este caso (no abusar), en donde haremos esta relación. Es decir, <strong>el caso de uso base, puede funcionar perfectamente, si no se realiza el caso de uso del cual extiende.</strong>  
+  Notamos en la figura 2.6, que la dirección de la flecha es en otro sentido, esto se debe a que así es la notación de la relación de extensión, el sentido va desde el caso de uso que se extiende, hasta el caso de uso que la consume.  
 </p>
 <p style="text-align: justify;">
-Debemos tener muy claro que esta extensión, no tiene que ver con la técnica de herencia en el paradigma de orientación a objetos, la relación de extensión y la herencia, son dos cosas completamente distintas, ya que se encuentran en contextos diferentes a pesar de su similitud en sus denominaciones.
+  Debemos tener muy claro que esta extensión, no tiene que ver con la técnica de herencia en el paradigma de orientación a objetos, la relación de extensión y la herencia, son dos cosas completamente distintas, ya que se encuentran en contextos diferentes a pesar de su similitud en sus denominaciones.
 </p>
 
-<center>![casos de uso include](img/CUextend.png)</center>
-<center><small>Figura 2.6: Relación de extensión.</small></center>  
+&nbsp;
+<center>![relación de extensión](img/CUextend.png)</center>
+<center><small>Figura 2.6 - relación de extensión.</small></center>  
+&nbsp;
 
-**Generalización**  
-
+* __Generalización__  
 <p style="text-align: justify;">
-Cuando hablamos de generalización, esta vez sí que nos estamos refiriendo, a algo muy parecido de lo que hace la herencia en la orientación a objetos, pero esta vez en el contexto de comprender el escenario. Cuando creamos a un actor y un caso de uso, si este caso de uso es una abstracción de otros casos de uso o el actor también podría ser una abstracción de muchos otros actores, podemos aplicar la generalización (otra vez, sin abusar). Así, si el "padre" contiene muchas cosas que un "hijo" que hace lo mismo pero más especializada, esta relación nos sería útil.
+  Cuando hablamos de generalización, esta vez sí que nos estamos refiriendo, a algo muy parecido de lo que hace la herencia en la orientación a objetos, pero esta vez en el contexto de comprender el escenario. Cuando creamos a un actor y un caso de uso, si este caso de uso es una abstracción de otros casos de uso o el actor también podría ser una abstracción de muchos otros actores, podemos aplicar la generalización (otra vez, sin abusar). Así, si el "padre" contiene muchas cosas que un "hijo" que hace lo mismo pero más especializada, esta relación nos sería útil.
 </p>
 
+&nbsp;
 <center>![Uso de la generalización](img/CUGeneraliza.png)</center>
-<center><small>Figura 2.7: Uso de la generalización.</small></center>  
+<center><small>Figura 2.7 - uso de la generalización.</small></center>  
+&nbsp;
 
-**Evitar abusos en la granularidad.**
+* __Evitar abusos en la granularidad.__
 <p style="text-align: justify;">
-Se debe tener presente que no hay que abusar del uso de estas relaciones, ya que se suele pensar que si el caso de uso se compone de varias piezas, estas deben ser expresadas en el diagrama. Hay que recordar que UML, es un lenguaje que lo utilizamos como herramienta, para lograr una mejor comprensión de lo que se debe desarrollar, complicarlo con complejos diagramas no es el objetivo. Es por eso que no haremos cosas como lo que se representa en la figura 2.8, y, nos enfocaremos siempre en lo suficientemente importante para la comprensión del escenario al que estamos representando, se podría tomar como referencia y sobre todo en un contexto ágil, que el diseño del escenario del caso de uso, cuando se implemente, no debería superar las tres semanas de desarrollo y que se trate solamente de aquellos detalles importantes para lograr que se cumplan estos plazos mentales.
+  Se debe tener presente que no hay que abusar del uso de estas relaciones, ya que se suele pensar que si el caso de uso se compone de varias piezas, estas deben ser expresadas en el diagrama. Hay que recordar que UML, es un lenguaje que lo utilizamos como herramienta, para lograr una mejor comprensión de lo que se debe desarrollar, complicarlo con complejos diagramas no es el objetivo. Es por eso que no haremos cosas como lo que se representa en la figura 2.8, y, nos enfocaremos siempre en lo suficientemente importante para la comprensión del escenario al que estamos representando, se podría tomar como referencia y sobre todo en un contexto ágil, que el diseño del escenario del caso de uso, cuando se implemente, no debería superar las tres semanas de desarrollo y que se trate solamente de aquellos detalles importantes para lograr que se cumplan estos plazos mentales.
 </p>
 
-<center>![casos de uso include](img/CUAbuso.png)</center>
-<center><small>Figura 2.8: Abuso de granularidad.</small></center>  
+&nbsp;
+<center>![abuso de granularidad](img/CUAbuso.png)</center>
+<center><small>Figura 2.8 - abuso de granularidad.</small></center>  
+&nbsp;
 
 ### **2.4 Ejemplos.**
 
