@@ -102,6 +102,11 @@
   Se trata de un estilo de programación imperativa, basado en estructurar el código de un programa en componentes, que reciben el nombre de procedimientos, subrutinas o funciones.
 </p>
 
+* __Rol__  
+<p style="text-aling: justify">
+  En el contexto de la vista de interacción, un rol es la descripción de un objeto, que desempeña un determinado papel dentro de una interacción.
+</p>
+
 * __Software__  
 <p style="text-aling: justify">
   Conjunto de programas, instrucciones y reglas informáticas que permiten ejecutar distintas tareas en una  computadora.
@@ -378,7 +383,9 @@ Diseñar un diagrama de casos de uso, que exprese el escenario de una máquina e
 </p>
 
 Solución:  
+&nbsp;
 <center>![casos de uso include](img/EJERCU001.png)</center>
+&nbsp;
 
 #### **Ejemplo 2.**
 
@@ -395,7 +402,53 @@ Diseñar un diagrama de casos de uso, que exprese el escenario que responde a lo
 
 Solución:  
 
+&nbsp;
 <center>![casos de uso include](img/EJERCU002.png)</center>
+&nbsp;
+
+#### **Ejemplo 3.**
+
+Diseñar un diagrama de casos de uso, que exprese el escenario que responde a un sistema de ventas de entradas online.
+
+
+Solución:  
+&nbsp;
+<center>![casos de uso include](img/EJERCU003.png)</center>
+&nbsp;
+
+
+
+
+---
+## **Capítulo 3 - Diagramas de secuencia.**
+---
+
+### **3.1 - Competencias esperadas.**
+* Tener nociones de la vista de interacción.
+* Construir diagrama de secuencia.
+
+### **2.2 - Introducción.**
+
+#### __Vista de interacción.__
+
+<p style="text-aling: justify">
+Esta vista en UML, describe secuencias de intercambios de mensajes entre los __roles__ que implementan el comportamiento del sistema. Esta visión proporciona una vista integral del comportamiento del sistema, es decir, muestra el flujo de control  a través de muchos objetos, este tipo de vista se expresa en dos diagramas, el diagrama de colaboración y el diagrama que veremos a continuación: El diagrama de secuencia.
+</p>
+
+#### __Diagrama de secuencia.__
+
+<p style="text-aling: justify">
+Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical.
+</p>
+
+<p style="text-aling: justify">
+Como vimos en un ejemplo anterior, en donde usamos los casos de uso para modelar el escenario de la compra de entradas online. Veamos ahora como poder llevar ese caso de uso a un diagrama de secuencia. De un diagrama de casos de uso, pueden salir muchos diagrámas de secuencia, por ejemplo está la secuancia en el caso que el usuario acepte o rechace la inscripción como socio, además de la interacción del administrador con el sistema. Es por eso, que se muestra un flujo normal y los demás se descartan. Hay que recordar que debemos usar solamente lo necesario para que la idea sea captada.
+</p>
+
+&nbsp;
+<center>![casos de uso include](img/SECUENCIA001.png)</center>
+<center><small>Figura 3.1 - Compra de entradas online, flujo normal.</small></center>  
+&nbsp;
 
 
 
