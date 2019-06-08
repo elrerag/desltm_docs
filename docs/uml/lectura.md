@@ -103,11 +103,6 @@
   Se trata de un estilo de programación imperativa, basado en estructurar el código de un programa en componentes, que reciben el nombre de procedimientos, subrutinas o funciones.
 </p>
 
-* __Rol__  
-<p style="text-aling: justify">
-  En el contexto de la vista de interacción, un rol es la descripción de un objeto, que desempeña un determinado papel dentro de una interacción.
-</p>
-
 * __Software__  
 <p style="text-aling: justify">
   Conjunto de programas, instrucciones y reglas informáticas que permiten ejecutar distintas tareas en una  computadora.
@@ -430,16 +425,26 @@ Solución:
 
 ### **3.2 - Introducción.**
 
-#### __Vista de interacción.__
+#### __3.2.1 - Vista de interacción.__
 
 <p style="text-align: justify;">
 Esta vista en UML, describe secuencias de intercambios de mensajes entre los <code>roles</code> que implementan el comportamiento del sistema. Esta visión proporciona una vista integral del comportamiento del sistema, es decir, muestra el flujo de control  a través de muchos objetos, este tipo de vista se expresa en dos diagramas, el diagrama de colaboración y el diagrama que veremos a continuación: El diagrama de secuencia.
 </p>
 
-#### __Diagrama de secuencia.__
+#### __3.2.2 - Diagrama de secuencia.__
 
 <p style="text-align: justify;">
 Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical. A diferencia de otros diagramas, el diagrama de de secuencia al mostrarnos interacciones entre los roles, está dentro de los diagramas dinámicos. <strong>Puede usarse un diagrama de secuencia, para mostrar las interacciones en un caso de uso o en un escenario de un sistema de software.</strong>
+</p>
+
+* __Rol__  
+<p style="text-aling: justify">
+  Es la descripción de un objeto, que desempeña un determinado papel dentro de una interacción.
+</p>
+
+* __Mensaje__  
+<p style="text-aling: justify">
+  Es la funcionalidad que permite la comunicación entre los roles. De acá, ya tendremos una idea de lo que serán los métodos y sus interacciones.
 </p>
 
 &nbsp;
@@ -475,7 +480,7 @@ Podemos además como se ha mencionado, diseñar flujos alternativos.
 <center><small>Figura 3.4 - Flujo alternativo, cuenta no posee saldo.</small></center>  
 &nbsp;
 
-> "El código surge con naturalidad del diagrama de secuencia. En la práctica, generalmente me sirvo de un diagrama de secuencia para bosquejar la interacción y después hago algunos cambios a medida que lo codifico. Si la interacción es importante, entonces actualizo la gráfica de secuencia como parte de mi documentación. Si considero que tal gráfica no añadirá mucha claridad al código, archivo el borrador de la gráfica de secuencia en el archivero circular", - << Martin Fowler - 1998 >>
+> "El código surge con naturalidad del diagrama de secuencia. En la práctica, generalmente me sirvo de un diagrama de secuencia para bosquejar la interacción y después hago algunos cambios a medida que lo codifico. Si la interacción es importante, entonces actualizo la gráfica de secuencia como parte de mi documentación. Si considero que tal gráfica no añadirá mucha claridad al código, archivo el borrador de la gráfica de secuencia en el archivero circular", - << Martin Fowler >>  
 
 <p style="text-align: justify;">
 Ya podemos entonces identificar las interacciones entre los roles. Tenemos a un usuario que requiere la compra de una entrada, entonces podemos imaginar que necesitamos un tipo de dato llamado entrada, quizás en este punto se nos ocurre la idea que puedan existir varios tipos de entradas y le preguntemos al especialista del negocio, aquellas dudas que surgen en este punto, antes que sea demasiado tarde y tengamos desarrollado algo erróneo. Analizaremos estas afirmaciones en el siguiente capítulo.
