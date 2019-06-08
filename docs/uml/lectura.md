@@ -20,6 +20,7 @@
 
 * UML distilled - Martin Fowler.
 * El Lenguaje Unificado de Modelado - J. Rumbaugh, I. Jacobson, G. Booch.
+* Ingeniería del software: un enfoque práctico séptima edición- Pressman · MC Graw-Hill
 * [https://www.smartdraw.com/uml-diagram/](https://www.smartdraw.com/uml-diagram/)
 * [https://ingenieriadesoftware.es/opiniones-lenguaje-uml-20-anos/](https://ingenieriadesoftware.es/opiniones-lenguaje-uml-20-anos/)
 * [https://www.uml.org](https://www.uml.org)
@@ -375,7 +376,6 @@ Empleamos el término actor para llamar así al usuario, cuando desempeña ese p
 A continuación, veremos direferentes ejemplos de diagramas de casos de uso, estos diagramas, pueden ser representados de diferentes maneras, siempre y cuando, se pueda comprender el escenario que se desea representar. Es por eso que las respuestas a estas preguntas no son únicas. Se recomienda diseñar los diagrámas de la forma más sencilla posible.
 </p>
 
-
 #### **Ejemplo 1.**
 
 <p style="text-align: justify;">
@@ -417,39 +417,69 @@ Solución:
 &nbsp;
 
 
-
-
 ---
 ## **Capítulo 3 - Diagramas de secuencia.**
 ---
 
 ### **3.1 - Competencias esperadas.**
 * Tener nociones de la vista de interacción.
+* Conocer el concepto de los diagramas de secuencia.
+* Conocer el papel de los roles y los mensajes.
 * Construir diagrama de secuencia.
+* Eficiencia en la construcción de los diagramas de secuencia.
 
-### **2.2 - Introducción.**
+### **3.2 - Introducción.**
 
 #### __Vista de interacción.__
 
-<p style="text-aling: justify">
-Esta vista en UML, describe secuencias de intercambios de mensajes entre los __roles__ que implementan el comportamiento del sistema. Esta visión proporciona una vista integral del comportamiento del sistema, es decir, muestra el flujo de control  a través de muchos objetos, este tipo de vista se expresa en dos diagramas, el diagrama de colaboración y el diagrama que veremos a continuación: El diagrama de secuencia.
+<p style="text-align: justify;">
+Esta vista en UML, describe secuencias de intercambios de mensajes entre los <code>roles</code> que implementan el comportamiento del sistema. Esta visión proporciona una vista integral del comportamiento del sistema, es decir, muestra el flujo de control  a través de muchos objetos, este tipo de vista se expresa en dos diagramas, el diagrama de colaboración y el diagrama que veremos a continuación: El diagrama de secuencia.
 </p>
 
 #### __Diagrama de secuencia.__
 
-<p style="text-aling: justify">
-Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical.
-</p>
-
-<p style="text-aling: justify">
-Como vimos en un ejemplo anterior, en donde usamos los casos de uso para modelar el escenario de la compra de entradas online. Veamos ahora como poder llevar ese caso de uso a un diagrama de secuencia. De un diagrama de casos de uso, pueden salir muchos diagrámas de secuencia, por ejemplo está la secuancia en el caso que el usuario acepte o rechace la inscripción como socio, además de la interacción del administrador con el sistema. Es por eso, que se muestra un flujo normal y los demás se descartan. Hay que recordar que debemos usar solamente lo necesario para que la idea sea captada.
+<p style="text-align: justify;">
+Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical. A diferencia de otros diagramas, el diagrama de de secuencia al mostrarnos interacciones entre los roles, está dentro de los diagramas dinámicos. <strong>Puede usarse un diagrama de secuencia, para mostrar las interacciones en un caso de uso o en un escenario de un sistema de software.</strong>
 </p>
 
 &nbsp;
-<center>![casos de uso include](img/SECUENCIA001.png)</center>
-<center><small>Figura 3.1 - Compra de entradas online, flujo normal.</small></center>  
+<center>![Diagrama de secuencia](img/SECUENCIA000.png)</center>
+<center><small>Figura 3.1 - Diagrama de secuencia.</small></center>  
+&nbsp;  
+
+
+<p style="text-align: justify;">
+Como vimos en un ejemplo anterior, en donde usamos los casos de uso para modelar el escenario de la compra de entradas online. Veamos ahora como poder llevar ese caso de uso a un diagrama de secuencia. De un diagrama de casos de uso, pueden salir muchos diagrámas de secuencia, por ejemplo, está la secuencia en el caso que, el usuario acepte o rechace la inscripción como socio, además de la interacción del administrador con el sistema. Es por eso, que se muestra un flujo normal y los demás se descartan. Hay que recordar que debemos usar solamente lo necesario para que la idea sea captada.
+</p>
+
+&nbsp;
+<center>![Compra de entradas online, flujo normal.](img/SECUENCIA001.png)</center>
+<center><small>Figura 3.2 - Compra de entradas online, flujo normal.</small></center>  
 &nbsp;
 
+Hagamos el flujo normal del administrador consultando las ventas.
+
+&nbsp;
+<center>![casos de uso include](img/SECUENCIA002.png)</center>
+<center><small>Figura 3.3 - Flujo normal, administrador consulta las ventas</small></center>  
+&nbsp;
+
+<p style="text-align: justify;">
+Se puede ver que algunos mensajes poseen argumentos y otros no. Notamos una similitud a la programación de métodos; pero hay que tener cuidado al pensar que deben estár la totalidad de los métodos que contendrán nuestras clases, ya que esto sería una complicación innecesaria en la etapa de toma de requerimientos. Lo que haya faltado por diseñar, se puede agregar en la siguiente iteración, a menos que se tenga el suficiente tiempo, además de la absoluta claridad en lo que se quiere desarrollar.  
+</p>
+
+Podemos además como se ha mencionado, diseñar flujos alternativos.
+
+&nbsp;
+<center>![Flujo alternativo, cuenta no posee saldo](img/SECUENCIA003.png)</center>
+<center><small>Figura 3.4 - Flujo alternativo, cuenta no posee saldo.</small></center>  
+&nbsp;
+
+> "El código surge con naturalidad del diagrama de secuencia. En la práctica, generalmente me sirvo de un diagrama de secuencia para bosquejar la interacción y después hago algunos cambios a medida que lo codifico. Si la interacción es importante, entonces actualizo la gráfica de secuencia como parte de mi documentación. Si considero que tal gráfica no añadirá mucha claridad al código, archivo el borrador de la gráfica de secuencia en el archivero circular", - << Martin Fowler - 1998 >>
+
+<p style="text-align: justify;">
+Ya podemos entonces identificar las interacciones entre los roles. Tenemos a un usuario que requiere la compra de una entrada, entonces podemos imaginar que necesitamos un tipo de dato llamado entrada, quizás en este punto se nos ocurre la idea que puedan existir varios tipos de entradas y le preguntemos al especialista del negocio, aquellas dudas que surgen en este punto, antes que sea demasiado tarde y tengamos desarrollado algo erróneo. Analizaremos estas afirmaciones en el siguiente capítulo.
+</p>
 
 
 
