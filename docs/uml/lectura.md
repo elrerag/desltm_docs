@@ -486,5 +486,348 @@ Podemos además como se ha mencionado, diseñar flujos alternativos.
 Ya podemos entonces identificar las interacciones entre los roles. Tenemos a un usuario que requiere la compra de una entrada, entonces podemos imaginar que necesitamos un tipo de dato llamado entrada, quizás en este punto se nos ocurre la idea que puedan existir varios tipos de entradas y le preguntemos al especialista del negocio, aquellas dudas que surgen en este punto, antes que sea demasiado tarde y tengamos desarrollado algo erróneo. Analizaremos estas afirmaciones en el siguiente capítulo.
 </p>
 
+---
+## **Capítulo 4 - Diagrama de Clases.**
+---
+### **4.1 - Competencias esperadas.**
+* Relacionar el diagrama con la POO.
+* Reconocer las notaciones como cajas y generalizaciones.
+* Construir diagrama de clases.
+* Llevar los diagrámas de clase a código en Java.
 
+### **4.2 - Introducción.**
+
+<p style="text-align: justify;">
+  Para modelar las clases e interfaces, incluidos sus atributos, operaciones, relaciones y asociaciones con otras clases, el UML proporciona el diagrama de clases, que aporta una visión estática o de estructura de un sistema, sin mostrar la naturaleza dinámica de las comunicaciones entre los objetos de las clases.
+  El diagrama de clase, además de ser de uso extendido, también está sujeto a la más amplia gama de conceptos de modelado. Aunque los elementos básicos son necesarios para todos, los conceptos avanzados se usan con mucha menor frecuencia. Es por eso que se toman los temas más importantes y suficiente para lograr los objetivos propuestos.
+</p>
+
+### **4.3 - Componentes de un diagrama de clases.**
+
+####__4.3.1 - Atributos de una clase.__
+<p style="text-align: justify;">
+  Un atributo es algo que un objeto de dicha clase conoce o puede proporcionar todo el tiempo. Por lo general, los atributos se implementan como campos (variables de instancia) de una clase, pero no necesitan serlo. Podrían ser valores que la clase puede calcular a partir de sus variables o valores de instancia y que puede obtener de otros objetos de los cuales está compuesto. Por ejemplo, un objeto puede conocer siempre la hora actual y regresarla siempre que se solicite. Por tanto sería adecuado mencionar la hora actual como un atributo de dicha clase de objetos. Sin embargo, el objeto muy probablemente no tendría dicha hora almacenada en una de sus variables de instancia, por que necesitaría actualizar de manera continua ese campo. En vez de ello, el objeto probablemente calcularía la hora actual (por ejemplo, a través de consulta con objetos de otras clases) en el momento en el que se le solicite la hora.
+</P>
+
+####__4.3.2 - Operaciones.__
+
+<p style="text-align: justify;">
+  Una operación, es lo que pueden hacer los objetos de la clase. por lo general, se implementa como un método de la clase.
+</p>
+
+####__4.3.3 - Cajas.__
+
+<p style="text-align: justify;">
+  Elementos principales de un diagrama de clase, son los íconos utilizados para representar clases e interfaces. Cada caja se divide en partes horizontales. La parte superior contiene el nombre de la clase. La sección media menciona sus atributos. La tercera sección del diagrama de clase, contiene las operaciones o comportamientos de la clase.
+</p>
+
+&nbsp;
+<center>![Ejemplo de una claja](img/CLASES001.png)</center>
+<center><small>Figura 4.1 - Ejemplo de una caja. La representación gráfica de una clase..</small></center>  
+&nbsp;
+
+<p style="text-align: justify;">
+La figura 4.1, presenta un ejemplo simple de una clase <code>PuraSangre</code>, esta, modela caballos de pura sangre. Muestra tres atributos: <code>padre</code>, <code>madre</code>, <code>anioNacimiento</code>. El diagrama también muestra tres operaciones: <code>obtenerPadre()</code>, <code>obtenerMadre()</code>, <code>obtenerEdadActual()</code>. <strong>Puede haber otros atributos que no se muestren en el diagrama.</strong> Cada atributo, puede tener un nombre, un tipo y un nivel de visibilidad. El tipo y la visibilidad son opcionales. El tipo sigue al nombre y se separa de él mediante dos puntos. La visibilidad se indica mediate un <code>-, #, ~ o +</code> precedente, que indica, respectivamente, visibilidad privada, protegida, paquete o pública. En la figura 4.1, todos los atributos tienen visibilidad privada, como se indica mediante el signo menos que lo antecede (-). También es posible, especificar si un atributo es del tipo <code>static</code> subrayándolo. Cada operación puede desplegarse con un nivel de visibilidad, parámetros con nombres y tipos y un tipo de retorno.
+</p>
+
+__La implementación de la caja de ejemplo en Java sería la siguiente:__
+
+``` java
+package cl.desafiolatam.uml.diagramaclase;
+
+import java.util.Date;
+
+public class PuraSangre {
+  private PuraSangre padre;
+  private PuraSangre madre;
+  private int anioNacimiento;
+
+  public PuraSangre obtenerPadre() {
+    // TODO implementar acá
+    return null;
+  }
+
+  public PuraSangre obtenerMadre() {
+    // TODO implementar acá
+    return null;
+  }
+
+  public int obtenerEdadActual(Date anioActual) {
+    // TODO implementar acá
+    return 0;
+  }
+
+}
+
+```  
+
+<p style="text-align: justify;">
+Vemos que ya podemos comenzar a preparar el código base de nuestra aplicación, incluso la herramienta <code>starUml</code> posee una opción de llevar nuestro modelo a código.
+</p>
+
+__Paso 1: Debemos tener nuestro diagrama de clases, en un modelo como indica la siguiente imágen:__
+
+&nbsp;
+<center>![ejemplogeneracion](img/CLASES002.png)</center>
+&nbsp;
+
+__Paso 2: Seleccionamos `tools -> Java -> generate code`.__
+
+&nbsp;
+<center>![ejemplogeneracion](img/CLASES003.png)</center>
+&nbsp;
+
+
+__Paso 3: Seleccionamos la el modelo y la ubicación en donde lo queremos dejar. Esto genera una carppeta con el nombre del modelo y si revisamos su interior, encontraremos los archivos generados, en este caso es solo uno.__
+
+&nbsp;
+<center>![ejemplogeneracion](img/CLASES004.png)</center>
+&nbsp;
+
+__Podemos entonces revisar su contenido:__
+
+```Java
+
+
+import java.util.*;
+
+/**
+ * 
+ */
+public class PuraSangre {
+
+    /**
+     * Default constructor
+     */
+    public PuraSangre() {
+    }
+
+    /**
+     * 
+     */
+    private PuraSangre padre;
+
+    /**
+     * 
+     */
+    private PuraSangre madre;
+
+    /**
+     * 
+     */
+    private int anioNacimiento;
+
+    /**
+     * @return
+     */
+    public PuraSangre obtenerPadre() {
+        // TODO implement here
+        return null;
+    }
+
+    /**
+     * @return
+     */
+    public PuraSangre obtenerMadre() {
+        // TODO implement here
+        return null;
+    }
+
+    /**
+     * @param anioActual 
+     * @return
+     */
+    public int obtenerEdadActual(Date anioActual) {
+        // TODO implement here
+        return 0;
+    }
+
+}
+
+```
+
+
+####__4.3.4 - Generalización (Herencia).__
+
+<p style="text-align: justify;">
+  Los diagramas de clase, también pueden mostrar relaciones entre las clases, una clase que sea una subclase de otra clase se conecta con ella mediante una flecha con una línea sólida y con una punta triangular hueca. La flecha apunta de la subclase a la superclase. Podemos relacionar esto con la relación de herencia en la POO.
+</p>
+
+&nbsp;
+<center>![Ejemplo de generalización01](img/CLASES005.png)</center>
+<center><small>Figura 4.2 - Ejemplo de generalización - (Herencia).</small></center>  
+&nbsp;
+
+__Clase `Caballo`:__
+
+```Java
+package cl.desafiolatam.uml.diagramaclase;
+
+import java.util.Date;
+
+public class Caballo {
+    private String nombre;
+    private int anioNacimiento;
+
+    public Caballo(String nombre, int anioNacimiento) {
+      this.nombre = nombre;
+      this.anioNacimiento = anioNacimiento;
+    }
+
+    public String obtenerNombre() {
+        // TODO implementar aquí.
+        return "";
+    }
+
+    public int obtenerEdadActual(Date anioActual) {
+        // TODO implementar aquí.
+        return 0;
+    }
+
+}
+
+```
+__Clase `PuraSangre`:__
+
+```Java
+package cl.desafiolatam.uml.diagramaclase;
+
+import java.util.Date;
+
+public class PuraSangre extends Caballo {
+    private PuraSangre padre;
+    private PuraSangre madre;
+
+    public PuraSangre(PuraSangre padre, PuraSangre madre, String nombre, int anioNacimiento) {
+      super(String nombre, int anioNacimiento);
+      this.padre = padre;
+      this.madre = madre;
+    }
+
+   public PuraSangre obtenerPadre() {
+      // TODO implementar acá
+      return null;
+   }
+
+    public PuraSangre obtenerMadre() {
+      // TODO implementar acá
+      return null;
+    }
+
+}
+
+```
+
+__Clase `CuartoDeMilla`:__
+
+```Java
+package cl.desafiolatam.uml.diagramaclase;
+
+import java.util.Date;
+
+public class CuartoDeMilla extends Caballo {
+    public CuartoDeMilla padre;
+    public CuartoDeMilla madre;
+
+    public CuartoDeMilla(PuraSangre padre, PuraSangre madre, String nombre, int anioNacimiento) {
+      super(String nombre, int anioNacimiento);
+      this.padre = padre;
+      this.madre = madre;
+    }
+
+    public CuartoDeMilla obtenerPadre() {
+        // TODO implementar aquí.
+        return null;
+    }
+
+    public CuartoDeMilla obtenerMadre() {
+        // TODO implementar aquí.
+        return null;
+    }
+
+}
+
+```
+
+####__4.3.5 - Implementación de Interfaces en UML.__
+
+<p style="text-align: justify;">
+Podemos expresar además, la relación de implementación de interfaces. Esto nos ayuda a poder diseñar un bosquejo de lo que se pretende construir, de esta forma, podemos hacer un mapa completo de la estructura que tendrán nuestras clases e interfaces además de poder generar el código desde la misma herramienta
+</p>
+
+&nbsp;
+<center>![Ejemplo de interfaces](img/CLASES006.png)</center>
+<center><small>Figura 4.3 - Ejemplo de interfaces.</small></center>  
+&nbsp;
+
+__Clase: Equino__
+
+``` Java
+package cl.desafiolatam.uml.interfaces
+
+public interface Equino {
+
+    public abstract void Hablar();
+
+}
+
+```
+
+&nbsp;
+
+__Clase: Caballo__
+
+``` Java
+package cl.desafiolatam.uml.interfaces
+
+public class Caballo implements Equino {
+
+    public void Hablar() {
+        // TODO implementar aquí.
+    }
+
+}
+
+```
+
+&nbsp;
+
+__Clase: Cebra__
+
+``` Java
+package cl.desafiolatam.uml.interfaces
+
+
+public class Cebra implements Equino {
+
+    public Cebra() {}
+    @Override
+    public void Hablar() {
+        // TODO implementar aquí.
+    }
+
+}
+
+```
+&nbsp;
+
+__Clase: Mula__
+
+``` Java
+package cl.desafiolatam.uml.interfaces
+
+
+public class Mula implements Equino {
+
+    @Override
+    public void Hablar() {
+        // TODO implementar aquí.
+    }
+
+}
+
+```
+<p style="text-align: justify;">
+Podemos generar un código muy similar desde la herramienta, y ver que se auto-generan los métodos que se implementan desde la interfaz. De esta forma, podemos ver que si utilizamos el paradigma de programación orientado a objetos, este diagrama nos proporciona no solamente una idea de como debemos implementar el código, sino que además nos proporciona parte de dicho código.
+</p>
 
