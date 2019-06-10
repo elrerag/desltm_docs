@@ -154,3 +154,68 @@
       <li>B - Es falsa. Podemos ir diagramando nuevas interacciones durante a medida que avancen las iteraciones.</li>
    </ul>  
 *Respuesta correcta: B.*
+
+---
+#### **Capítulo 4 - Diagrama de Clases.**
+---
+
+##### **Pregunta 1 - Cuál de las siguientes afirmaciones es falsa.**  
+
+   <ul style="list-style-type: none;">
+      <li>A - A partir de los diagramas de clases, podemos obtener la estructura jerárquica  de nuestras clases e interfaces.</li>
+      <li>B - Un atributo, no es exactamente un campo o variable de instancia.</li>
+      <li>C - Cuando diseñamos una caja, se deben especificar todos los atributos y operaciones que vayan a estar finalmente, en nuestra clase implementada.</li>
+      <li>D - El diagrama de clases es del tipo estático.</li>
+   </ul>  
+*Respuesta correcta: C.*
+
+##### **Pregunta 2 - Cual de las siguientes afirmaciones es correcta..**  
+
+   <ul style="list-style-type: none;">
+      <li>A - Una operación por lo general se implementa como un atributo de la clase..</li>
+      <li>B - El prefijo (-) significa público.</li>
+      <li>C - No es posible indicar el tipo de variable de retorno en las operaciones.</li>
+      <li>D - Una clase conoce o puede proporcionar todo el tiempo el valor de un atributo.</li>
+      <li>E - Ninguna afirmación es correcta.</li>
+   </ul>  
+*Respuesta correcta: D.*
+
+##### **Pregunta 3 - Cual de las siguientes afirmaciones es correcta..**  
+
+Dado el siguiente código:
+
+```Java
+
+Class Foo {
+  private int a;
+  private int b;
+
+  public Foo(int a, int b){
+    this.a = a;
+    this.b = b;
+  }
+
+  public int getA(){
+    return this.a;
+  }
+
+  public int getB(){
+    return this.b;
+  }
+
+}
+
+```
+
+
+¿Cuál es la caja que mejor lo representa?
+
+![A](img/CLASES007.png)
+
+
+   <ul style="list-style-type: none;">
+      <li> A - Solo A </li>
+      <li> B - Solo B </li>
+      <li> C - A y B. </li>
+   </ul>  
+*Respuesta correcta: B.*
