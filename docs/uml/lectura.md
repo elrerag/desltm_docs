@@ -168,7 +168,7 @@ Ya se ha mencionado que UML lo usamos como una herramienta, y para que lo sea, t
 
 &nbsp;
 <p style="text-align: justify;">
-La mayoría de las personas que podían reconocer la programación en esos años e incluso en ahora, la asocia al paradigma de la programación imperativa. Antes de que el mundo comenzara a utilizar la POO de forma natural, se utilizaba la programación procedural, y esto era lo usual, lo que sabíamos, por tanto, un cambio en el paradigma suponía un esfuerzo que queda reflejado en la frase de Hadfield. Entonces estamos ante una herramienta que nos permite modelar,  y por ejemplo, por medio de un <code>framework</code> llevaríamos rápidamente a código los diagramas que hemos diseñado, si están correctamente diseñados por supuesto. Todo esto gracias a que UML fue concebido para la POO. Entonces, ¿en qué situación nos encontramos ahora?. Se podría afirmar que un "nuevo" paradigma emerge, el paradigma de la programación declarativa, todo esto debido a que lenguajes como <code>javascript</code>, que toma fuerza en la cantidad de aplicaciones que existentes o que se estén desarrollando; pero hay que mencionar que este lenguaje, es un lenguaje funcional (hija del paradigma declarativo), y, además es un lenguaje imperativo. Entonces nos encontramos ante una mezcla de lo que es programación funcional y programación orientada a objetos. Quizás debamos comenzar a comprender que esta mezcla de paradigmas puede coexistir y debemos acostumbrarnos a ello, verlo como una nueva forma de construir, y, no verlo como un dolor de cabeza, hasta que nos acostumbremos a su uso. UML nos seguirá sirviendo para representar gráficamente problemas; pero quizás el enfoque cambie un poco, hacia la utilización de nuevas herramientas que mezcle lo funcional con lo orientado a objetos. Verán que en librerías como _React js_ ya utiliza esta mezcla de paradigmas y que cada nueva versión de Java, incluye muchas herramientas que permiten usar la programación funcional. Como sea que termine esta história, UML aún nos entrega una interfaz entre lo que es abstracto y lo que podríamos llamar tangible.
+La mayoría de las personas que podían reconocer la programación en esos años e incluso ahora, la asocia al paradigma de la programación imperativa. Antes de que el mundo comenzara a utilizar la POO de forma natural, se utilizaba la programación procedural, y esto era lo usual, lo que sabíamos. por esta razón un cambio en el paradigma suponía un esfuerzo que queda reflejado en la frase de Hadfield. Entonces estamos ante una herramienta que nos permite modelar,  y por ejemplo, por medio de un <code>framework</code> llevaríamos rápidamente a código los diagramas que hemos diseñado, si están correctamente diseñados por supuesto. Todo esto gracias a que UML fue concebido para la POO. Entonces, ¿en qué situación nos encontramos ahora?. Se podría afirmar que un "nuevo" paradigma emerge, el paradigma de la programación declarativa, todo esto debido a que lenguajes como <code>javascript</code>, que toma fuerza en la cantidad de aplicaciones que existentes o que se estén desarrollando; pero hay que mencionar que este lenguaje, es un lenguaje funcional (hija del paradigma declarativo), y, además es un lenguaje imperativo. Entonces nos encontramos ante una mezcla de lo que es programación funcional y programación orientada a objetos. Quizás debamos comenzar a comprender que esta mezcla de paradigmas puede coexistir y debemos acostumbrarnos a ello, verlo como una nueva forma de construir, y, no verlo como un dolor de cabeza, hasta que nos acostumbremos a su uso. UML nos seguirá sirviendo para representar gráficamente problemas; pero quizás el enfoque cambie un poco, hacia la utilización de nuevas herramientas que mezcle lo funcional con lo orientado a objetos. Verán que en librerías como _React js_ ya utiliza esta mezcla de paradigmas y que cada nueva versión de Java, incluye muchas herramientas que permiten usar la programación funcional. Como sea que termine esta história, UML aún nos entrega una interfaz entre lo que es abstracto y lo que podríamos llamar tangible.
 </p>
 
 ### **1.7 - El proceso de desarrollo de software.**
@@ -208,7 +208,64 @@ Todas las técnicas de UML son útiles durante esta etapa; pero hay que ser cuid
 Durante la <strong>transición</strong>, no se hacen desarrollos para añadir funciones nuevas (a menos que sean pequeñas y absolutamente indispensables). Ciertamente, sí hay desarrollo para depuración. Un buen ejemplo de una fase de transición es el tiempo entre la liberación beta y ]a liberación definitiva del producto.
 </p>
 
-### **1.8 - Tipos de diagramas en UML.**  
+### **1.8 - La práctica de la ingeniería de software.**
+
+<p style="text-align: justify;">
+  Al describir el proceso de desarrollo de software, logramos poder ver las actividades estructurales generales, que son el esqueleto de la arquitectura para el trabajo de ingeniería de software. Con la finalidad de poder tener una mayor comprensión de esta práctica citemos un libro clásico <i>"How to solve it"</i>, escrito antes que existieran las computadoras modernas. Acá <i>George Polya</i>, escribió, sin saberlo, la esencia de la práctica de la ingeniería de software:
+</p>
+
++ Entender el problema (Comunicación y análisis).
++ __Planear la solución (Modelado y diseño del software).__
++ Ejecutar el plan (generación del código).
++ Examinar la exactitud del resultado (probar y asegurar la calidad).
+
+<p style="text-align: justify;">
+  Centremos la atención en la planificación de la solución. Luego de entender el problema (o al menos creer que lo entendemos) y no puede contener las ganas de comenzar a desarrollar la solución; debemos realizarnos las siguientes preguntas:
+</p>
+
++ ¿Ha visto antes, problemas similares?
++ ¿Hay patrones reconocibles en una solución potencial?
++ ¿Hay algún software existente que implemente los datos, funciones y características que se requieren?
++ ¿Ha resuelto un problema similar? Si es así, ¿Son reutilizables los elementos de la solución?
++ ¿El problema, se puede dividir en problemas más pequeños? Si es así ¿Hay soluciones evidentes para estos?
+
+<p style="text-align: justify;">
+  Por eso, antes de comenzar a implementar la solución o generar modelos usando UML, nos ahorraremos una buena cantidad de tiempo, si tomamos un poco de aire y nos detenemos a respondernos las preguntas ya expuestas.
+</p>
+
+
+### **1.9 - Un poco acerca de requerimientos.**  
+
+<p style="text-align: justify;">
+  Los requerimientos son una especificación de lo que debe ser implementado. Estos son descripciones de cómo el sistema se debe comportar, de las propiedades y atributos del mismo. Deben ser una restricción del proceso de desarrollo del sistema. Existen dos clases de requerimientos, los requerimientos funcionales y los no funcionales.
+</p>
+
+#### **1.9.1 - Requerimientos funcionales (qué hacer).**
+
+<p style="text-align: justify;">
+  Son las descripciones explicitas del comportamiento que debe tener el sistema y qué información debe manejar. Nos muestran las capacidades o cualidades que debe tener el sistema. Se enfoca en cuál debe ser el comportamiento de la solución y qué información debe manejar. Ejemplos de este tipo de requerimientos pueden ser los siguientes:
+</p>
++ El sistema deberá ser capaz de generar el reporte anual.
++ Debe ser capaz de ejecutar procesos nocturnos de reportería.
++ Mantendrá los datos de ventas actualizados.
++ Debe disponer de la información detallada de los proveedores.
++ Etc.
+
+
+
+#### **1.9.2 - Requerimientos no funcionales (cómo hacerlo).**
+
+<p style="text-align: justify;">
+  Describen eficiencia, seguridad lógica y de datos, usabilidad o cualquier tipo de requerimiento que no se refiera a las funcionalidades del qué se debe hacer. Son aquellos que nos define el como debe efectuar la tarea, en este tipo de descripción entran detalles como el rendimiento de los recursos: 
+</p>
++ Los permisos de acceso al sistema podrán ser cambiados solamente por el administrador.
++ El sistema debe ser capaz de operar adecuadamente, con hasta 100.000.000 usuarios con sesiones concurrentes.
++ El tiempo de aprendizaje del sistema por usuario; deberá ser menor a 4 horas.
++ Etc.
+
+
+
+### **1.10 - Tipos de diagramas en UML.**  
 
 <p style="text-align: justify;">
 No existe una línea que divida claramente UML; pero podemos reconocer los diferentes tipos de diagramas, para poder apreciar el aspecto del sistema que se intenta representar.  
@@ -290,16 +347,6 @@ Usualmente, el caso de uso se extrae de las interacciones, que los potenciales u
 <p style="text-align: justify;">
 Cuando se están tomando los requerimientos, a veces es fácil confundirse entre los objetivos que el usuario tiene y las <strong>interacciones que hará con el sistema</strong>. Supongamos el desarrollo de un sistema de ventas. Surgirán interacciones como: "Ingresar un producto", "actualizar precio". etc. Esto difiere de los objetivos que pueda tener el usuario como, "mantener la información de los precios actualizada", "Garantizar que esté disponible la información de los productos". En ambos casos tenemos requerimientos del usuario, pero la granularidad es diferente, ya que las interacciones son más sencillas de implementar que los objetivos. Cuando estamos reuniendo los casos de uso del sistema, debemos mantener una granularidad más o menos similar, es decir, el nivel de detalle y complejidad de cada caso de uso, debe ser similar. Finalmente como lo definimos, mantendremos el foco de la captura de los casos de uso, centradas en las interacciones, sin perder de vista los objetivos, en el caso que sólo tengamos los objetivos del usuario, debemos granular esta información, en interacciones necesarias para que se cumplan los objetivos.
 Como recomendación, es bueno tener varios casos de uso por objetivo, al menos los objetivos principales, ya que en las iteraciones que vayamos haciendo, se recibe mucho mejor que el usuario vea como se van cumpliendo sus objetivos (aunque lo más probable es que estos objetivos vayan evolucionando a medida que el sistema avanza).
-</p>
-
-* __Requerimientos no funcionales (cómo hacerlo)__
-<p style="text-align: justify;">
-  Son aquellos que nos define el como debe efectuar la tarea, en este tipo de descripción entran detalles como el rendimiento de los recursos: ---"Quiero que el sistema sea rápido", ---"quiero que la base de datos tenga 10 teras de capacidad", etc.  
-</p>
-
-* __Requerimientos funcionales (qué hacer)__
-<p style="text-align: justify;">
-  Son aquellos que nos definen el qué hacer, <strong>los casos de uso, saldrán de este tipo de requerimientos</strong>, acá debemos identificar las interacciones que hará el usuario con el sistema, como: ---"Quiero poder dar de alta a un usuario", "quiero actualizar los detalles de los perfiles de un usuario", etc. 
 </p>
 
 #### **2.3.2 - Actores**
@@ -828,6 +875,29 @@ public class Mula implements Equino {
 
 ```
 <p style="text-align: justify;">
-Podemos generar un código muy similar desde la herramienta, y ver que se auto-generan los métodos que se implementan desde la interfaz. De esta forma, podemos ver que si utilizamos el paradigma de programación orientado a objetos, este diagrama nos proporciona no solamente una idea de como debemos implementar el código, sino que además nos proporciona parte de dicho código.
+ Podemos generar un código muy similar desde la herramienta, y ver que se auto-generan los métodos que se implementan desde la interfaz. De esta forma, podemos ver que si utilizamos el paradigma de programación orientado a objetos, este diagrama nos proporciona no solamente una idea de como debemos implementar el código, sino que además nos proporciona parte de dicho código.
 </p>
+
+
+<p style="text-align: justify;">
+  Los sistemas de software son una de las tecnologías más importantes en todo el mundo. En los últimos 60 años, el software ha pasado a ser la solución de un problema especializado y herramienta de análisis de la información a una industria en sí misma. No obstante, aún hay problemas para desarrollar software de alta calidad a tiempo y dentro del presupuesto asignado.
+  "Una imagen vale más que mil palabras", pero antes de esto, debemos saber de qué imagen se trata y cuáles son esas mil palabras. Si no logramos generar diagramas que logren comunicar una correcta solución, surge una imagen errónea, que conduce al software erróneo.
+</p>
+
+__Como consejo final de la unidad, se listan los principios del modelado, a lo que debemos apegarnos con la mayor fuerza posible, para que lo aprendido de UML, sea un real aporte al desarrollo de software.__
+
++ El equipo de software, tiene como objetivo principal, elaborar software y no modelos.
++ Viajar ligero, no crear más modelos de los necesarios.
++ Tratar de producir el modelo más sencillo que describa al problema o al software.
++ Construir modelos susceptibles al cambio.
++ Ser capaz de enunciar un propósito explícito para cada modelo que se cree.
++ Adaptar los modelos que se desarrollan al sistema en cuestión.
++ Tratar de construir modelos útiles, pero olvidarse de construir modelos perfectos.
++ No ser dogmáticos respecto a la sintaxis del modelo. Si se tiene éxito para comunicar contenido, la representación es secundaria.
++ Si su instinto dice que un modelo no es correcto a pesar de que se vea bien en el papel, hay razones para estár preocupados.
++ Obtener retroalimentación tan pronto como sea posible.
+
+Si se siguen estos principios, nuestros modelos tendrán un mejor aporte y no significaran una pérdida de tiempo, si no que todo lo contrario, por que hay que recordar que _meses de programación, nos ahorran unas horas de planificación_.
+
+---
 
