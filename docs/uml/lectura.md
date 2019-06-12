@@ -251,8 +251,7 @@ Durante la <strong>transición</strong>, no se hacen desarrollos para añadir fu
 + Debe disponer de la información detallada de los proveedores.
 + Etc.
 
-
-
+__De este tipo de requerimientos, se extraen los casos de uso (Capítulo 2).__
 #### **1.9.2 - Requerimientos no funcionales (cómo hacerlo).**
 
 <p style="text-align: justify;">
@@ -262,8 +261,6 @@ Durante la <strong>transición</strong>, no se hacen desarrollos para añadir fu
 + El sistema debe ser capaz de operar adecuadamente, con hasta 100.000.000 usuarios con sesiones concurrentes.
 + El tiempo de aprendizaje del sistema por usuario; deberá ser menor a 4 horas.
 + Etc.
-
-
 
 ### **1.10 - Tipos de diagramas en UML.**  
 
@@ -312,6 +309,21 @@ Los diagramas que están destacados, se detallarán en los capítulos posteriore
 <p style="text-align: justify;">
 Durante mucho tiempo, cuando era utilizado el paradigma procedural de forma popular, incluso cuando la POO comenzaba a ser muy conocida y utilizada. Los escenarios eran representados de forma muy rústica. las personas se auxiliaban de escenarios típicos que les ayudaban a comprender los requerimientos. Muchas veces se construían; pero no se documentaban, Ivar Jacobson, uno de los tres creadores de UML, elevó la visibilidad del caso de uso (su nombre para un escenario) a tal punto, que lo convirtió en un elemento primario de la planificación y el desarrollo de proyectos de software.
 </p>
+
+#### **2.2.1 - Uso de la herramienta StarUml.**
+<p style="text-align: justify;">
+  Esta herramienta nos permite realizar todos los tipos de diagramas que se explicarán en esta unidad, su uso es libre aunque si lo pagamos tendremos acceso a más opciones, para los que deseen ahondar en el diseño con esta herramienta existen planes mensuales y anuales. Para efectos de uso en la unidad, la versión libre nos será suficiente.
+</p>
+
+Para instalar la herramienta, debemos ir a la siguiente URL: [http://staruml.io/download](http://staruml.io/download)
+
+&nbsp;
+<center>![diagrama](img/star001.png)</center>
+&nbsp;
+
+Descargamos la versión de nuestro sistema operativo e instalamos como cualquier otro programa. 
+
+Una vez instalado podemos entonces comenzar a utilizarlo.
 
 ### **2.3 - Diagramas de casos de uso (Cuentan una historia).**
 <p style="text-align: justify;">
