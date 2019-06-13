@@ -149,7 +149,7 @@ En el año 1980, el paradigma de la orientación a objetos; ya no era parte sola
 
 ### **1.4 - A la hora de implementar este lenguaje, ¿Qué tan rigurosos debemos ser?**  
 <p style="text-align: justify;">
-El propósito de UML es ser una herramienta, y, como tal, se debe tener en cuenta que su estricta utilización, irá directamente relacionada con el contexto en el que se esté trabajando, por ejemplo, si estamos trabajando en una herramienta, que a partir de los modelos que se creen con UML, se genere código de forma automatizada. Es en este caso, donde usaremos UML de forma rigurosa, para que el código generado sea el que se necesita.  
+El propósito de UML es ser una herramienta y como tal, se debe tener en cuenta que su estricta utilización, irá directamente relacionada con el contexto en el que se esté trabajando, por ejemplo, si estamos trabajando en una herramienta, que a partir de los modelos que se creen con UML, se genere código de forma automatizada. Es en este caso, donde usaremos UML de forma rigurosa, para que el código generado sea el que se necesita.  
 En el caso que se desee utilizar UML en el contexto de una reunión en la que se desee entender un problema y donde los modelos diseñados no sean documentados formalmente (por ejemplo en una pizarra en una reunión con el cliente), podemos entonces usar UML con mayor libertad, sin dar tanta importancia a los detalles, sino que basta con que expliquen el problema de una forma global. En este tipo de casos debemos usar lo mínimo que nos aporte una mejor interpretación del problema que se desea resolver. Existen ocasiones en que la notación oficial puede llegar a estorbar, en estos casos no hay que dudar en adaptar el lenguaje a las necesidades personales. Quizás puede ser mal visto el que no estemos usando UML con todas sus sutilezas; pero en este caso ganamos flexibilidad y mientras la comunicación no se vea afectada, no existe mayor problema en alterar un poco este lenguaje. Hay que tener cuidado al momento de adaptarlo, no nos podemos exceder, ya que el diferir mucho la estructura oficial, puede resultar en que no se comprenda lo que se desee expresar.
 </p>
 
@@ -330,6 +330,12 @@ Una vez instalado podemos entonces comenzar a utilizarlo.
 En el año 1994, Jacobson no solo logró introducir los casos de uso como un concepto para ayudar en los primeros pasos del desarrollo de aplicaciones, además, desarrollo una representación gráfica de este hecho y lo llamó El <strong>Diagrama de Casos de Uso</strong>, y este diagrama ahora forma parte de UML.
 </p>
 
+### En la herramienta, nos vamos a model -> add diagram -> Use Case Diagram.
+
+&nbsp;
+<center>![casosUso](img/custar.png)</center>
+&nbsp;
+
 Una representación de un diagrama de casos de uso sería el siguiente:  
 
 &nbsp;
@@ -492,6 +498,12 @@ Esta vista en UML, describe secuencias de intercambios de mensajes entre los <co
 
 #### __3.2.2 - Diagrama de secuencia.__
 
+### En la herramienta, nos vamos a model -> add diagram -> Sequence Diagram.
+
+&nbsp;
+<center>![casosUso](img/custar2.png)</center>
+&nbsp;
+
 <p style="text-align: justify;">
 Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical. A diferencia de otros diagramas, el diagrama de de secuencia al mostrarnos interacciones entre los roles, está dentro de los diagramas dinámicos. <strong>Puede usarse un diagrama de secuencia, para mostrar las interacciones en un caso de uso o en un escenario de un sistema de software.</strong>
 </p>
@@ -561,6 +573,12 @@ Ya podemos entonces identificar las interacciones entre los roles. Tenemos a un 
   El diagrama de clase, además de ser de uso extendido, también está sujeto a la más amplia gama de conceptos de modelado. Aunque los elementos básicos son necesarios para todos, los conceptos avanzados se usan con mucha menor frecuencia. Es por eso que se toman los temas más importantes y suficiente para lograr los objetivos propuestos.
 </p>
 
+### En la herramienta, nos vamos a model -> add diagram -> Class Diagram.
+
+&nbsp;
+<center>![casosUso](img/custar3.png)</center>
+&nbsp;
+
 ### **4.3 - Componentes de un diagrama de clases.**
 
 ####__4.3.1 - Atributos de una clase.__
@@ -585,9 +603,38 @@ Ya podemos entonces identificar las interacciones entre los roles. Tenemos a un 
 <center><small>Figura 4.1 - Ejemplo de una caja. La representación gráfica de una clase..</small></center>  
 &nbsp;
 
+La figura 4.1, presenta un ejemplo simple de una clase `PuraSangre`, esta modela caballos de pura sangre y osee tres atributos:
+
++ `padre`.
++ `madre`.
++ `anioNacimiento`.
+
+Además de tres operaciones:
+
++ `obtenerPadre()`.
++ `obtenerMadre()`.
++ `obtenerEdadActual()`.
+
 <p style="text-align: justify;">
-La figura 4.1, presenta un ejemplo simple de una clase <code>PuraSangre</code>, esta, modela caballos de pura sangre. Muestra tres atributos: <code>padre</code>, <code>madre</code>, <code>anioNacimiento</code>. El diagrama también muestra tres operaciones: <code>obtenerPadre()</code>, <code>obtenerMadre()</code>, <code>obtenerEdadActual()</code>. <strong>Puede haber otros atributos que no se muestren en el diagrama.</strong> Cada atributo, puede tener un nombre, un tipo y un nivel de visibilidad. El tipo y la visibilidad son opcionales. El tipo sigue al nombre y se separa de él mediante dos puntos. La visibilidad se indica mediate un <code>-, #, ~ o +</code> precedente, que indica, respectivamente, visibilidad privada, protegida, paquete o pública. En la figura 4.1, todos los atributos tienen visibilidad privada, como se indica mediante el signo menos que lo antecede (-). También es posible, especificar si un atributo es del tipo <code>static</code> subrayándolo. Cada operación puede desplegarse con un nivel de visibilidad, parámetros con nombres y tipos y un tipo de retorno.
+ <strong>Puede haber otros atributos que no se muestren en el diagrama.</strong> Cada atributo, puede tener un nombre, un tipo y un nivel de visibilidad. El tipo y la visibilidad son opcionales. El tipo sigue al nombre y se separa de él mediante dos puntos. La visibilidad se indica, anteponiendo cualquiera de los siguientes símbolos: 
 </p>
+
++ <code>-</code> Visibilidad privada.
++ <code>#</code> Visibilidad protegida.
++ <code>~</code> Paquete.
++ <code>+</code> Visibilidad privada.
+
+También es posible, especificar si un atributo es del tipo static subrayándolo.
+
+Para los atributos especificamos el nombre y el tipo de retorno de la siguiente forma:
+
++ <code>nombre</code>:<code>tipoDeRetorno</code>
+
+En el caso de las operaciones, tenemos estas más opciones:
+
++ <code>nombreOperacion(nombreParametro:tipo, ...)</code>
++ <code>nombreOperacion():tipoRetorno</code>
++ <code>nombreOperacion(nombreParametro:tipo, ...):tipoRetorno</code>
 
 __La implementación de la caja de ejemplo en Java sería la siguiente:__
 
@@ -717,7 +764,7 @@ public class PuraSangre {
 <center><small>Figura 4.2 - Ejemplo de generalización - (Herencia).</small></center>  
 &nbsp;
 
-__Clase `Caballo`:__
+#####__Clase `Caballo`:__
 
 ```Java
 package cl.desafiolatam.uml.diagramaclase;
@@ -746,7 +793,8 @@ public class Caballo {
 }
 
 ```
-__Clase `PuraSangre`:__
+
+#####__Clase `PuraSangre`:__
 
 ```Java
 package cl.desafiolatam.uml.diagramaclase;
@@ -777,7 +825,9 @@ public class PuraSangre extends Caballo {
 
 ```
 
-__Clase `CuartoDeMilla`:__
+
+##### __Clase `CuartoDeMilla`:__
+
 
 ```Java
 package cl.desafiolatam.uml.diagramaclase;
