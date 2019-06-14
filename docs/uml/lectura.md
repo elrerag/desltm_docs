@@ -144,7 +144,7 @@
 
 ### __1.3 - Un poco de historia.__  
 <p style="text-align: justify;">
-En el año 1980, el paradigma de la orientación a objetos; ya no era parte solamente del contexto científico, en vez de ello, se encontraba ya en uso "cotidiano" en lenguajes que comenzaron a ser ampliamente utilizados como `Smalltalk`, dando paso a la creación de nuevos lenguajes basados en en la _POO_., como es el caso de `C++`. Antes de que todo esto ocurriera, ya existían diferentes tipos de metodologías para representar el diseño de un _software_ utilizando la _programación procedural_; pero ahora había que lograr el mismo éxito en la POO. Entre los años 90 y el 98, muchas fueron las organizaciones que intentaron llegar a un estándar unificado; pero finalmente "los tres amigos", y, su versión 1.1 de UML fueron los ganadores. Tal fue su éxito, que hasta el día de hoy seguimos usando UML como el lenguaje, para representar el diseño de artefactos de nuestras aplicaciones.
+En el año 1980, el paradigma de la orientación a objetos; ya no era parte solamente del contexto científico, en vez de ello, se encontraba ya en uso "cotidiano" en lenguajes que comenzaron a ser ampliamente utilizados como `Smalltalk`, dando paso a la creación de nuevos lenguajes basados en en la _POO_., como es el caso de `C++` y `Java`. Antes de que todo esto ocurriera, ya existían diferentes tipos de metodologías para representar el diseño de un _software_ utilizando la _programación procedural_; pero ahora había que lograr el mismo éxito en la POO. Entre los años 90 y el 98, muchas fueron las organizaciones que intentaron llegar a un estándar unificado; pero finalmente "los tres amigos", y, su versión 1.1 de UML fueron los ganadores. Tal fue su éxito, que hasta el día de hoy seguimos usando UML como el lenguaje, para representar el diseño de artefactos de nuestras aplicaciones.
 </p>
 
 ### **1.4 - A la hora de implementar este lenguaje, ¿Qué tan rigurosos debemos ser?**  
@@ -243,7 +243,7 @@ Durante la <strong>transición</strong>, no se hacen desarrollos para añadir fu
 #### **1.9.1 - Requerimientos funcionales (qué hacer).**
 
 <p style="text-align: justify;">
-  Son las descripciones explicitas del comportamiento que debe tener el sistema y qué información debe manejar. Nos muestran las capacidades o cualidades que debe tener el sistema. Se enfoca en cuál debe ser el comportamiento de la solución y qué información debe manejar. Ejemplos de este tipo de requerimientos pueden ser los siguientes:
+  Son las descripciones explícitas del comportamiento que debe tener el sistema y qué información debe manejar. Nos muestran las capacidades o cualidades que debe tener el sistema. Se enfoca en cuál debe ser el comportamiento de la solución y qué información debe manejar. Ejemplos de este tipo de requerimientos pueden ser los siguientes:
 </p>
 + El sistema deberá ser capaz de generar el reporte anual.
 + Debe ser capaz de ejecutar procesos nocturnos de reportería.
@@ -451,7 +451,7 @@ Solución:
 
 Diseñar un diagrama de casos de uso, que exprese el escenario que responde a los siguientes requerimientos:
 
-* Un juego de teléfono móvil dónde participan dos jugadores cada uno con su propia terminal.
+* Un juego de teléfono móvil donde participan dos jugadores cada uno con su propia terminal.
 
 * Cuando dos jugadores desean jugar, uno de ellos crea una nueva partida y el otro se conecta.
 
@@ -489,24 +489,25 @@ Solución:
 * Eficiencia en la construcción de los diagramas de secuencia.
 
 ### **3.2 - Introducción.**
-
-#### __3.2.1 - Vista de interacción.__
-
 <p style="text-align: justify;">
-Esta vista en UML, describe secuencias de intercambios de mensajes entre los <code>roles</code> que implementan el comportamiento del sistema. Esta visión proporciona una vista integral del comportamiento del sistema, es decir, muestra el flujo de control  a través de muchos objetos, este tipo de vista se expresa en dos diagramas, el diagrama de colaboración y el diagrama que veremos a continuación: El diagrama de secuencia.
+  Extraer los casos de uso de una aplicación por medio de los requerimientos funcionales de un usuario, parece ahora una tarea simple. Pero ¿qué pasa con su comportamiento?. Tenemos las interacciones que asumimos que tienen los actores con el sistema; pero es posible analizar esas interacciones con un poco más de detalle para poder interpretar si el comportamiento que se pensó o se piensa, sea el correcto.
 </p>
 
-#### __3.2.2 - Diagrama de secuencia.__
+#### __3.3 - Diagrama de secuencia.__
+
+<p style="text-align: justify;">
+En UML, existe la llamada "Vista de interacción", describe secuencias de intercambios de mensajes entre los <code>roles</code> que implementan el comportamiento del sistema. Esta visión proporciona una vista integral del comportamiento del sistema, es decir, muestra el flujo de control  a través de muchos objetos, este tipo de vista se expresa en dos diagramas, el diagrama de colaboración y el diagrama que veremos a continuación: El diagrama de secuencia.
+</p>
+
+<p style="text-align: justify;">
+Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical. A diferencia de otros diagramas, el diagrama de de secuencia al mostrarnos interacciones entre los roles, está dentro de los diagramas dinámicos. <strong>Puede usarse un diagrama de secuencia, para mostrar las interacciones en un caso de uso o en un escenario de un sistema de software.</strong>
+</p>
 
 ### En la herramienta, nos vamos a model -> add diagram -> Sequence Diagram.
 
 &nbsp;
 <center>![casosUso](img/custar2.png)</center>
 &nbsp;
-
-<p style="text-align: justify;">
-Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una secuencia temporal. Cada rol en la secuencia se muestra como una línea de vida, una línea vertical. A diferencia de otros diagramas, el diagrama de de secuencia al mostrarnos interacciones entre los roles, está dentro de los diagramas dinámicos. <strong>Puede usarse un diagrama de secuencia, para mostrar las interacciones en un caso de uso o en un escenario de un sistema de software.</strong>
-</p>
 
 * __Rol__  
 <p style="text-aling: justify">
@@ -544,7 +545,9 @@ Hagamos el flujo normal del administrador consultando las ventas.
 Se puede ver que algunos mensajes poseen argumentos y otros no. Notamos una similitud a la programación de métodos; pero hay que tener cuidado al pensar que deben estár la totalidad de los métodos que contendrán nuestras clases, ya que esto sería una complicación innecesaria en la etapa de toma de requerimientos. Lo que haya faltado por diseñar, se puede agregar en la siguiente iteración, a menos que se tenga el suficiente tiempo, además de la absoluta claridad en lo que se quiere desarrollar.  
 </p>
 
-Podemos además como se ha mencionado, diseñar flujos alternativos.
+<p style="text-align: justify;">
+Podemos además como se ha mencionado, diseñar flujos alternativos. Un flujo alternativo, es aquél que no forma parte del problema principal, pero amerita que sea expuesto, por ejemplo, si es que pasa algún error en el flujo y saber como abordarlo.
+</p>
 
 &nbsp;
 <center>![Flujo alternativo, cuenta no posee saldo](img/SECUENCIA003.png)</center>
@@ -564,7 +567,7 @@ Ya podemos entonces identificar las interacciones entre los roles. Tenemos a un 
 * Relacionar el diagrama con la POO.
 * Reconocer las notaciones como cajas y generalizaciones.
 * Construir diagrama de clases.
-* Llevar los diagrámas de clase a código en Java.
+* Llevar los diagramas de clase a código en Java.
 
 ### **4.2 - Introducción.**
 
@@ -684,7 +687,7 @@ __Paso 2: Seleccionamos `tools -> Java -> generate code`.__
 &nbsp;
 
 
-__Paso 3: Seleccionamos la el modelo y la ubicación en donde lo queremos dejar. Esto genera una carppeta con el nombre del modelo y si revisamos su interior, encontraremos los archivos generados, en este caso es solo uno.__
+__Paso 3: Seleccionamos la el modelo y la ubicación en donde lo queremos dejar. Esto genera una carpeta con el nombre del modelo y si revisamos su interior, encontraremos los archivos generados, en este caso es solo uno.__
 
 &nbsp;
 <center>![ejemplogeneracion](img/CLASES004.png)</center>
@@ -956,7 +959,7 @@ __Como consejo final de la unidad, se listan los principios del modelado, a lo q
 + Adaptar los modelos que se desarrollan al sistema en cuestión.
 + Tratar de construir modelos útiles, pero olvidarse de construir modelos perfectos.
 + No ser dogmáticos respecto a la sintaxis del modelo. Si se tiene éxito para comunicar contenido, la representación es secundaria.
-+ Si su instinto dice que un modelo no es correcto a pesar de que se vea bien en el papel, hay razones para estár preocupados.
++ Si su instinto dice que un modelo no es correcto a pesar de que se vea bien en el papel, hay razones para estar preocupados.
 + Obtener retroalimentación tan pronto como sea posible.
 
 Si se siguen estos principios, nuestros modelos tendrán un mejor aporte y no significaran una pérdida de tiempo, si no que todo lo contrario, por que hay que recordar que _meses de programación, nos ahorran unas horas de planificación_.
