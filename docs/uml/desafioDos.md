@@ -8,28 +8,39 @@ En el siguiente desafío, tendremos la oportunidad de poder desarrollar la base 
 </p>
 
 * El usuario del sistema consta de los siguientes atributos: id, nombre, correo, esAdmin, password.
-* Los productos poseen los siguientes atributos: id, nombre, descripcion, cantidad, status, categoría.
+* Los productos poseen los siguientes atributos: id, nombre, descripcion, cantidad, status y poseen una categoría.
 * Un usuario puede ser vendedor y además ser comprador.
 * Los compradores realizan transacciones y los vendedores realizan el seteo de productos.
 
-<p style="text-align: justify;">
-Se debe realizar el diagrama de clases que modele el problema y además se debe escribir el código en Java, obtenido del diagrama de clases que acabamos de diseñar.
-</p>
+__Se deben realizar las siguientes tareas:__
+
+* Listar las clases que modelan el problema.
+* Crear el diagrama de clases con la información reunida, con sus atributos y operaciones.
+* Crear el código en Java que represente a estas clases.
+* Crear una aplicación que cree un vendedor y liste sus atributos.
 
 ---
 #### **Solución**
 ---
-##### Parte 1:
+__Listar las clases que modelan el problema.__
+
+* Comprador.
+* Vendedor.
+* Usuario.
+* Transaccion.
+* Categoría.
+
+__Crear el diagrama de clases con la información reunida, con sus atributos y operaciones.__
 &nbsp;
 <center>![casosUso](img/test00201.png)</center>
 &nbsp;
 
-##### Parte 2:
+__Crear el código en Java que represente a estas clases.__
 
 ###### Clase Usuario:
 
 ```Java
-package cl.desafiolatam.uml.desafio2
+package cl.desafiolatam.uml.desafio2;
 
 public class Usuario {
     private Long id;
@@ -37,50 +48,54 @@ public class Usuario {
     private String correo;
     private String password;
     private boolean esAdmin;
+    
+	public Usuario(Long id, String nombre, String correo, String password, boolean esAdmin) {
+		this.id = id;
+		this.nombre = nombre;
+		this.correo = correo;
+		this.password = password;
+		this.esAdmin = esAdmin;
+	}
 
-    public Usuario(Long id, String nombre, String correo, String password, boolean esAdmin) {
-        this id = id;
-        this nombre = nombre;
-        this correo = correo;
-        this password = password;
-        this esAdmin = esAdmin;
-    }
+	protected Long getId() {
+		return id;
+	}
 
-    public void setNombre(String nombre) {
-        // TODO implementar aquí.
-    }
+	protected void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setCorreo(String correo) {
-        // TODO implementar aquí.
-    }
+	protected String getNombre() {
+		return nombre;
+	}
 
-    public void setPassword(String password) {
-        // TODO implementar aquí.
-    }
+	protected void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-    public void setEsAdmin(void boolean opt) {
-        // TODO implementar aquí.
-    }
+	protected String getCorreo() {
+		return correo;
+	}
 
-    public String getNombre() {
-        // TODO implementar aquí.
-        return "";
-    }
+	protected void setCorreo(String correo) {
+		this.correo = correo;
+	}
 
-    public String getCorreo() {
-        // TODO implement here
-        return "";
-    }
+	protected String getPassword() {
+		return password;
+	}
 
-    public String getPassword() {
-        // TODO implement here
-        return "";
-    }
+	protected void setPassword(String password) {
+		this.password = password;
+	}
 
-    public boolean getEsAdmin() {
-        // TODO implement here
-        return false;
-    }
+	protected boolean isEsAdmin() {
+		return esAdmin;
+	}
+
+	protected void setEsAdmin(boolean esAdmin) {
+		this.esAdmin = esAdmin;
+	}
 
 }
 
@@ -89,37 +104,41 @@ public class Usuario {
 ###### Clase Comprador:
 
 ```Java
-package cl.desafiolatam.uml.desafio2
+package cl.desafiolatam.uml.desafio2;
 
-
-public class Comprador extends Usuario {
-    public Comprador(Long id, String nombre, String correo, String password, boolean esAdmin) {
-    	super(id, nombre, correo, password, esAdmin);
+public class Comprador extends Usuario{
+	final Producto producto = new Producto();
+	
+	public Comprador(Long id, String nombre, String correo, String password, boolean esAdmin) {
+        super(id, nombre, correo, password, esAdmin);
     }
-
-    public Producto getProducto() {
-        // TODO implementar aquí.
-        return null;
+	
+	public Producto getProducto() {
+        return this.producto;
     }
 
 }
+
 ```
 ###### Clase Vendedor:
 
 ```Java
-package cl.desafiolatam.uml.desafio2
+package cl.desafiolatam.uml.desafio2;
 
 public class Vendedor extends Usuario {
-
-    public Vendedor(Long id, String nombre, String correo, String password, boolean esAdmin) {
-    	super(id, nombre, correo, password, esAdmin);
+	
+	Producto producto;
+	
+	public Vendedor(Long id, String nombre, String correo, String password, boolean esAdmin) {
+        super(id, nombre, correo, password, esAdmin);
     }
-
-    public void setProducto(Producto prod) {
-        // TODO implementar aquí.
+	
+	public void setProducto(Producto prod) {
+        this.producto = prod;
     }
-
+	
 }
+
 ```
 
 ###### Clase Transaccion:
@@ -150,12 +169,11 @@ public class Categoria {
     }
 
     public void setNombre(void String nombre) {
-        // TODO implementar aquí.
+        this.nombre = nombre;
     }
 
     public String getNombre() {
-        // TODO implementar aquí.
-        return "";
+        return this.nombre;
     }
 
 }
@@ -165,8 +183,7 @@ public class Categoria {
 ###### Clase Producto:
 
 ```Java
-package cl.desafiolatam.uml.desafio2
-package cl.desafiolatam.uml.desafio2
+package cl.desafiolatam.uml.desafio2;
 
 public class Producto {
     private int id;
@@ -177,89 +194,97 @@ public class Producto {
     private Categoria categoria;
     private Comprador comprador;
     private Vendedor vendedor;
+	public Producto(int id, String nombre, String descripcion, int cantidad, int status, Categoria categoria,
+			Comprador comprador, Vendedor vendedor) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.cantidad = cantidad;
+		this.status = status;
+		this.categoria = categoria;
+		this.comprador = comprador;
+		this.vendedor = vendedor;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	public int getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+	public Comprador getComprador() {
+		return comprador;
+	}
+	public void setComprador(Comprador comprador) {
+		this.comprador = comprador;
+	}
+	public Vendedor getVendedor() {
+		return vendedor;
+	}
+	public void setVendedor(Vendedor vendedor) {
+		this.vendedor = vendedor;
+	}
+	
+	
 
-    public Producto(
-        int id, 
-        String nombre, 
-        String descripcion, 
-        int cantidad, 
-        int status, 
-        Categoria categoría){
-        
-        this.id = id;
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.cantidad = cantidad;
-        this.status = status;
-        this.categoria = categoria;
-    }
+}
 
-    public void setNombre(String nombre) {
-        // TODO implementar aquí.
-    }
 
-    public void setDescripcion(String descripcion) {
-        // TODO implementar aquí.
-    }
+```
 
-    public void setCantidad(int num) {
-        // TODO implementar aquí.
-    }
+__Crear una aplicación que cree un vendedor y liste sus atributos.__
 
-    public void setStatus(int status) {
-        // TODO implementar aquí.
-    }
 
-    public void setCategoría(Categoría cat) {
-        // TODO implementar aquí.
-    }
+```
+package cl.desafiolatam.uml.desafio2;
 
-    public void setComprador(Comprador comp) {
-        // TODO implementar aquí.
-    }
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		Vendedor vendedor1 = new Vendedor(1L, "Luis", "correo@fake.dev", "12345kl", true);
+		
+		System.out.println(vendedor1.getId().toString());
+		System.out.println(vendedor1.getNombre());
+		System.out.println(vendedor1.getCorreo());
+		System.out.println(vendedor1.getPassword());
+		System.out.println(vendedor1.isEsAdmin());
+		
 
-    public void setVendedor(Vendedor vend) {
-        // TODO implementar aquí.
-    }
-
-    public String getNombre() {
-        // TODO implementar aquí.
-        return "";
-    }
-
-    public String getDescripcion() {
-        // TODO implementar aquí.
-        return "";
-    }
-
-    public int getCantidad() {
-        // TODO implementar aquí.
-        return 0;
-    }
-
-    public int getStatus() {
-        // TODO implementar aquí.
-        return 0;
-    }
-
-    public Categoria getCategoría() {
-        // TODO implementar aquí.
-        return null;
-    }
-
-    public Comprador getComprador() {
-        // TODO implementar aquí.
-        return null;
-    }
-
-    public Vendedor getVendedor() {
-        // TODO implementar aquí.
-        return null;
-    }
+	}
 
 }
 
 ```
-
 
 
