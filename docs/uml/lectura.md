@@ -29,22 +29,22 @@
 ### **Glosario**  
 
 * __Agilidad__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Se refiere a la __flexibilidad__ que posee un proyecto, es decir, que pueda cambiar y que esto no produzca un alto impacto en el esfuerzo.
 </p>
 
 * __Aplicación__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es un tipo de software que permite al usuario realizar uno o más tipos de trabajo.
 <p>
 
 * __Cliente__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   En el contexto de la toma de requerimientos, es el ente que paga por el producto.
 </p>
 
 * __Framework__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Un marco de trabajo, o framework, es una estructura real o conceptual destinada a servir de soporte o guía para la construcción de algo que expande la estructura en algo útil. Para nuestro caso, es mejor que lo veamos como un software pre construido, al que le podemos ir adicionando piezas según sus reglas, con la finalidad obtener un producto personalizado a nuestras necesidades.
 </p>
 
@@ -54,67 +54,67 @@
 </p>
 
 * __Metodología__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Grupo de mecanismos o procedimientos racionales, empleados para el logro de un objetivo.
 </p>
 
 * __Notación__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es la acción y efecto de notar, hace referencia al sistema de signos convencionales que se adopta, para expresar algún concepto.
 </p>
 
 * __Paradigma__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Teoría o conjunto de teorías, cuyo núcleo central se acepta sin cuestionar y que suministra la base y modelo   para resolver problemas y avanzar en el conocimiento.
 </p>
 
 * __Patrón__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Hechos o cosas recurrentes. Estos se repiten con previsibilidad, por lo tanto, pueden funcionar como modelo para producir determinada cosa a partir de ellos.
 </p>
 
 * __Patrón de diseño de modelo-vista-controlador (MVC)__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Especifica que una aplicación consta de tres capas: La primera es el modelo de datos, que es la capa con la responsabilidad de la gestión de los datos, luego tenemos la capa de presentación, es lo que el usuario ve, es decir, la vista. La forma en que la información sea presentada al usuario, son responsabilidad de esta capa, por último, tenemos la capa del controlador, que es la capa encargada de orquestar o controlar, la interacción de las dos capas anteriormente mencionadas.
 </p>
 
 * __Programación declarativa__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es un paradigma de la programación, en la que los programas se describen en términos de proposiciones y afirmaciones, que son __declaradas__, en donde los pasos para resolverlo, no impera. En este tipo de programación, nos encontraremos mucha recursividad.
 </p>
 
 * __Programación Funcional__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es un paradigma que pertenece a la programación declarativa, basado en el trabajo de Alonzo Church y Stephen Kleene en la década de 1930, llamado: El Cálculo Lambda; este paradigma se compone de funciones que deben cumplir ciertas reglas (por ejemplo, que sean funciones puras). en donde encontraremos formas recursivas de por ejemplo, trabajar con arreglos como lo son: `map`, `reduce` o `filter`. La principal diferencia con la programación orientada a objetos, es que la programación funcional, no posee estados.
 </p>
 
 * __Programación Imperativa__:  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   En este paradigma de la programación, que, como su nombre lo indica, __imperan las instrucciones, condiciones o pasos__ indicamos exactamente, lo que el programa debe hacer. Típicamente nos encontraremos con estructuras cíclicas tales como: while, for. También condicionales if o switch. Lo que no quiere decir que si un programa posee estas instrucciones es puramente imperativo. Podemos reconocer este tipo de programación cuando leemos el código y su traza es una interpretación de lectura secuencial de lo que está escrito.
 </p>
 
 * __Programación Orientada a Objetos (POO)__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Este paradigma, es un tipo de programación imperativa, que mediante algunas técnicas (por ejemplo la herencia), resuelve algunas falencias que existían en la __programación procedural__ (por ejemplo la reutilización de código), utilizando objetos, cada uno de ellos, compuestos por un estado (datos) y un comportamiento.
 </p>
 
 * __Programación procedural__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Se trata de un estilo de programación imperativa, basado en estructurar el código de un programa en componentes, que reciben el nombre de procedimientos, subrutinas o funciones.
 </p>
 
 * __Software__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Conjunto de programas, instrucciones y reglas informáticas que permiten ejecutar distintas tareas en una  computadora.
 </p>
 
 * __Stakeholder__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es quien sostiene la estaca, todo aquél se se ve afectado por el producto y/o proyecto.
 </p>
 
 * __Usuario__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es quien usa el producto.
 </p>
 
@@ -128,13 +128,30 @@
 * Reconocer el paradigma de la programación en el que está basado UML.
 * Entender el concepto del proceso de creación de software.
 
-### __1.2 - Algunas definiciones__  
-* __1.2.1 ¿Qué es un modelo?__
-<p style="text-aling: justify">
+### __1.2 - Introducción__  
+
+<p style="text-align: justify">
+Los tres amigos. Quizás esta poca ortodoxa forma de llamar a los creadores de una de las mayores innovaciones conceptuales de los últimos tiempos, nos parezca algo alejado a lo que estamos acostumbrados; pero la misión de la creación de tecnología tiene ese propósito. Estos "amigos" quizás no pensaron que basándose en el trabajo que realizaron mientras el último respiro del pasado siglo los acompañaba; se han creado estándares que ya son oficiales. Quizás hemos sido testigos de la aplicación de UML en varios "bocetos" abandonados en pizarras llenas de sueños, que, tal vez llegaron a ser realidad. Puede que hasta lo hayamos utilizado sin darnos cuenta, o para aquellos con más experiencia; puede que lo sigan utilizando de forma profesional. UML no solo nos crea una interfaz entre lo que se piensa y lo que se hace, si no que además, ayuda no solo a la industria de software, sino, en general, de cualquier industria que utilice modelos. Cualquiera que sea el uso que se le esté dando a UML, deben saber estos, amigos; que su trabajo sigue estando vigente, tal vez no completamente en la forma que pensaron en un principio; pero nos sigue ayudando a enfocarnos en construir en lugar de reconstruir.
+</p>
+
+&nbsp;
+<center>![requerimientos](img/introimg1.png)</center>
+<center><small>Figura 1.1 - Comprensión de lo que de requiere desarrollar.</small></center>  
+&nbsp;
+
+### __1.3 - Algunas definiciones__  
+
+* __1.3.1 ¿Qué es un modelo?__  
+<p style="text-align: justify">
   Un modelo, es una representación de algo, en cierto medio (Papel, pantallas, maquetas, etc.), que capta los aspectos principales, ignorando los menos importantes o que no aporten información relevante. Un modelo en un sistema de software está expresado mediante UML.
 </p>
 
-* __1.2.2 - ¿Qué es UML?__  
+&nbsp;
+<center>![](img/img002.png)</center>
+<center><small>Figura 1.2 - Representación de un modelo.</small></center>  
+&nbsp;
+
+* __1.3.2 - ¿Qué es UML?__  
 <p style="text-align: justify;">
   UML (Unified Modeling language), es un **lenguaje** de modelado unificado, que surge a finales de la década de los 80 y principios de los 90. Entre los años 94 y 96, Grady y Jim e Ivar, conocidos como; "los tres amigos", crearon finalmente UML. Resultado de un trabajo iterativo y gradual, que pone a nuestra disposición, una norma construida sobre muchas ideas y contribuciones realizadas (unificadas), por numerosos individuos y compañías de la comunidad de la orientación a objetos.  
 </p>
@@ -171,17 +188,63 @@ Ya se ha mencionado que UML lo usamos como una herramienta, y para que lo sea, t
 La mayoría de las personas que podían reconocer la programación en esos años e incluso ahora, la asocia al paradigma de la programación imperativa. Antes de que el mundo comenzara a utilizar la POO de forma natural, se utilizaba la programación procedural, y esto era lo usual, lo que sabíamos. por esta razón un cambio en el paradigma suponía un esfuerzo que queda reflejado en la frase de Hadfield. Entonces estamos ante una herramienta que nos permite modelar,  y por ejemplo, por medio de un <code>framework</code> llevaríamos rápidamente a código los diagramas que hemos diseñado, si están correctamente diseñados por supuesto. Todo esto gracias a que UML fue concebido para la POO. Entonces, ¿en qué situación nos encontramos ahora?. Se podría afirmar que un "nuevo" paradigma emerge, el paradigma de la programación declarativa, todo esto debido a que lenguajes como <code>javascript</code>, que toma fuerza en la cantidad de aplicaciones que existentes o que se estén desarrollando; pero hay que mencionar que este lenguaje, es un lenguaje funcional (hija del paradigma declarativo), y, además es un lenguaje imperativo. Entonces nos encontramos ante una mezcla de lo que es programación funcional y programación orientada a objetos. Quizás debamos comenzar a comprender que esta mezcla de paradigmas puede coexistir y debemos acostumbrarnos a ello, verlo como una nueva forma de construir, y, no verlo como un dolor de cabeza, hasta que nos acostumbremos a su uso. UML nos seguirá sirviendo para representar gráficamente problemas; pero quizás el enfoque cambie un poco, hacia la utilización de nuevas herramientas que mezcle lo funcional con lo orientado a objetos. Verán que en librerías como _React js_ ya utiliza esta mezcla de paradigmas y que cada nueva versión de Java, incluye muchas herramientas que permiten usar la programación funcional. Como sea que termine esta história, UML aún nos entrega una interfaz entre lo que es abstracto y lo que podríamos llamar tangible.
 </p>
 
+&nbsp;
+<p style="text-align: justify;">
+  En el siguiente ejemplo, se puede ver el uso de estructuras funcionales, dentro del lenguaje Java. En ambos casos el resultado será 3 y 4.
+</p>
+&nbsp;
+
+```Java
+package cl.desafiolatam.ejemplos.padigmas;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+        ArrayList<Integer> numeros = new ArrayList<>();
+        numeros.add(1);
+        numeros.add(2);
+        numeros.add(3);
+        numeros.add(4);
+        
+        System.out.println("Resultado imperativo");
+        imperativo(numeros);
+        
+        System.out.println("Resultado funcional");
+        funcional(numeros);
+		    
+	}
+
+	public static void imperativo(ArrayList<Integer> numeros) {
+        for(Integer numero: numeros) {
+        	if(numero > 2) {
+        		System.out.println(numero);
+        	}
+        }
+
+	}
+
+	public static void funcional(ArrayList<Integer> numeros) {
+        numeros.stream().filter(x -> x > 2).collect(Collectors.toList()).forEach(System.out::println); 
+	}
+
+}
+
+```
+
 ### **1.7 - El proceso de desarrollo de software.**
 
 <p style="text-align: justify;">
 UML, es un lenguaje para modelar, por eso no asume la noción de un proceso; pero para poder realizar un buen desarrollo, hay que analizar el propio proceso de desarrollar aplicaciones.  
 </p>
 
-Una visión del desarrollo en su nivel más alto sería como la que muestra la figura 1.1.
+Una visión del desarrollo en su nivel más alto sería como la que muestra la figura 1.3.
 
 &nbsp;
 <center>![Proceso de desarrollo de software](img/procesoDesarrollo.png)</center>
-<center>Figura 1.1 - proceso de desarrollo de software.</center>
+<center>Figura 1.3 - proceso de desarrollo de software.</center>
 &nbsp;
 
 <p style="text-align: justify;">
@@ -193,7 +256,7 @@ En la <strong>elaboración</strong>, se detallan más profundamente los requerim
 </p>
 
 <p style="text-align: justify;">
-En la <strong>construcción</strong>, como se indica en la figura 1.1, la iteración es clave. No quiere decir que el las otras etapas no se pueda iterar; pero en esta etapa, cada iteración es un mini proyecto. Terminando con una demostración funcional al stakeholder. Con ello reducimos el riesgo, ya que si algo no ha salido como se quería, solamente está en juego la iteración y no el proyecto completo. La funcionalidad será incremental y la construcción de código será iterativa. <strong>¿Cuándo se debe usar el desarrollo iterativo?, El desarrollo iterativo únicamente se debe utilizar en aquellos proyectos que se quiere que tengan éxito.</strong>
+En la <strong>construcción</strong>, como se indica en la figura 1.3, la iteración es clave. No quiere decir que el las otras etapas no se pueda iterar; pero en esta etapa, cada iteración es un mini proyecto. Terminando con una demostración funcional al stakeholder. Con ello reducimos el riesgo, ya que si algo no ha salido como se quería, solamente está en juego la iteración y no el proyecto completo. La funcionalidad será incremental y la construcción de código será iterativa. <strong>¿Cuándo se debe usar el desarrollo iterativo?, El desarrollo iterativo únicamente se debe utilizar en aquellos proyectos que se quiere que tengan éxito.</strong>
 </p>
 
 <p style="text-align: justify;">
@@ -510,12 +573,12 @@ Un diagrama de secuencia, muestra un conjunto de mensajes, dispuestos en una sec
 &nbsp;
 
 * __Rol__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es la descripción de un objeto, que desempeña un determinado papel dentro de una interacción.
 </p>
 
 * __Mensaje__  
-<p style="text-aling: justify">
+<p style="text-align: justify">
   Es la funcionalidad que permite la comunicación entre los roles. De acá, ya tendremos una idea de lo que serán los métodos y sus interacciones.
 </p>
 
