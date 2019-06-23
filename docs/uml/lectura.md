@@ -506,6 +506,20 @@ Diseñar un diagrama de casos de uso, que exprese el escenario de una máquina e
 </p>
 
 Solución:  
+
+Lo primero que podemos identificar son los actores que interactúan en este escenario:
+
+* Usuario
+* Proveedor
+
+El usuario puede comprar el producto y el proveedor se encarga de retirar el dinero además de mantener la máquina con suficientes productos. Concluimos entonces que el escenario posee los siguientes Casos de Uso.
+
+* Comprar producto.
+* Recolectar dinero.
+* Reponer productos.
+
+Luego el Diagrama de Casos de Uso, sería el siguiente:  
+
 &nbsp;
 <center>![casos de uso include](img/EJERCU001.png)</center>
 &nbsp;
@@ -525,6 +539,19 @@ Diseñar un diagrama de casos de uso, que exprese el escenario que responde a lo
 
 Solución:  
 
+Al igual que en el ejemplo anterior, debemos reconocer a los actores involucrados. Estos serían los siguientes:
+
+* Terminal servidor, este se encarga de crear la partida.
+* Terminal cliente, encargado de unirse a la partida que se ha creado
+
+Podemos ver que ambos pueden dar término a la partida por tanto se concluyen los siguientes Casos de Uso.
+
+* Crear partida.
+* Unirse a la partida, necesita que la partida esté creada.
+* Terminar partida, necesita que la partida esté creada.
+
+Resultando en el siguiente Diagrama de Casos de Uso:
+
 &nbsp;
 <center>![casos de uso include](img/EJERCU002.png)</center>
 &nbsp;
@@ -535,6 +562,18 @@ Diseñar un diagrama de casos de uso, que exprese el escenario que responde a un
 
 
 Solución:  
+
+En este caso no disponemos de mucha información acerca de lo que se tiene que diseñar, excepto que es un sistema de ventas. Así que debemos usar la imaginación de un escenario típico.
+
+Este tipo de sistema debería tener un usuario, este, tendría la opción de comprar una entrada. Quizás podría registrarse como socio. Como un actor no humano, tendríamos el sistema de pago, que usualmente debería ser un servicio aparte del sistema, ya que no es nuestra responsabilidad cumplir con el nivel que necesita una transacción monetaria. Finalmente necesitamos a alguien que revise las ventas realizadas. De esto podemos obtener los siguientes, Casos de Uso.
+
+* Comprar entrada. (necesita cobrar).
+* Cobrar.
+* Registrarse como socio, opcional.
+* Revisar ventas.
+
+Como resultado de lo anterior, se obtiene el siguiente Diagrama de Casos de Uso:
+
 &nbsp;
 <center>![casos de uso include](img/EJERCU003.png)</center>
 &nbsp;
